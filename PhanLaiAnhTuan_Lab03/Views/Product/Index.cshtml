@@ -2,6 +2,8 @@
 
 @{
     ViewData["Title"] = "Danh sách sản phẩm";
+    string currentSort = ViewBag.SortOrder as string;
+    string currentSearch = ViewBag.SearchString as string;
 }
 
 <h1 class="mb-4">@ViewData["Title"]</h1>
@@ -10,6 +12,48 @@
     <a asp-action="Create" class="btn btn-primary">➕ Thêm mới sản phẩm</a>
     <a asp-controller="Categories" asp-action="Index" class="btn btn-success">📁 Quản lý danh mục</a>
 </div>
+
+<form asp-action="Index" method="get" class="mb-3">
+    <div class="row g-2">
+        <div class="col-md-6">
+            <input type="text" name="searchString" value="@currentSearch" class="form-control" placeholder="Tìm sản phẩm...">
+        </div>
+        <div class="col-md-4">
+            <select name="sortOrder" class="form-select" onchange="this.form.submit()">
+                <option value="">-- Sắp xếp --</option>
+                @if (currentSort == "name_asc")
+                {
+                    <option value="name_asc" selected>Tên A-Z</option>
+                }
+                else
+                {
+                    <option value="name_asc">Tên A-Z</option>
+                }
+
+                @if (currentSort == "price_asc")
+                {
+                    <option value="price_asc" selected>Giá tăng dần</option>
+                }
+                else
+                {
+                    <option value="price_asc">Giá tăng dần</option>
+                }
+
+                @if (currentSort == "price_desc")
+                {
+                    <option value="price_desc" selected>Giá giảm dần</option>
+                }
+                else
+                {
+                    <option value="price_desc">Giá giảm dần</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+        </div>
+    </div>
+</form>
 
 <table class="table table-bordered table-striped">
     <thead class="thead-dark">
@@ -24,22 +68,22 @@
     <tbody>
         @foreach (var item in Model)
         {
-                <tr>
-                    <td>
+            <tr>
+                <td>
                     @if (!string.IsNullOrEmpty(item.ImageUrl))
                     {
-                                <img src="~/images/@item.ImageUrl" alt="@item.Name" style="max-height: 80px;" />
+                        <img src="~/images/@item.ImageUrl" alt="@item.Name" style="max-height: 80px;" />
                     }
-                    </td>
-                    <td>@item.Name</td>
-                    <td>@item.Price.ToString("C")</td>
-                    <td>@item.Category?.Name</td>
-                    <td>
-                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">🔍 Chi tiết</a>
-                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">✏️ Sửa</a>
-                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">🗑️ Xóa</a>
-                    </td>
-                </tr>
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@(item.Category?.Name ?? "Chưa có danh mục")</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">🔍 Chi tiết</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">✏️ Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">🗑️ Xóa</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

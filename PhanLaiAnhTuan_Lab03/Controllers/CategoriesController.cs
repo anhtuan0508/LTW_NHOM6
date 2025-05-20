@@ -8,10 +8,12 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
     public class CategoriesController : Controller
     {
         private readonly ICategoryRepository _categoryRepository;
+        private readonly IProductRepository _productRepository;
 
-        public CategoriesController(ICategoryRepository categoryRepository)
+        public CategoriesController(ICategoryRepository categoryRepository, IProductRepository productRepository)
         {
             _categoryRepository = categoryRepository;
+            _productRepository = productRepository;
         }
 
         // GET: /Categories
@@ -72,13 +74,25 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View(category);
         }
 
-        // POST: /Categories/DeleteConfirmed/5
         [HttpPost, ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            var products = await _productRepository.GetProductsByCategoryIdAsync(id);
+
+            foreach (var product in products)
+            {
+                product.CategoryId = null;
+                await _productRepository.UpdateAsync(product);
+            }
+
             await _categoryRepository.DeleteCategoryAsync(id);
             return RedirectToAction(nameof(Index));
         }
+
+
+
+
+
     }
 }

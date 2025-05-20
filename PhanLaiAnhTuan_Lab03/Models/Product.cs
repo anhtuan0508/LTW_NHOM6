@@ -16,8 +16,8 @@ namespace PhanLaiAnhTuan_Lab03.Models
 
         public string? ImageUrl { get; set; }  
 
-        public int CategoryId { get; set; }
-        public Category? Category { get; set; }
+        public int? CategoryId { get; set; }
+        public Category Category { get; set; }
     }
 
 }

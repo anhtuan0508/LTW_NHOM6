@@ -4,6 +4,7 @@ using PhanLaiAnhTuan_Lab03.Models;
 using PhanLaiAnhTuan_Lab03.Repositories;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 
 namespace PhanLaiAnhTuan_Lab03.Controllers
 {
@@ -23,9 +24,26 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         }
 
         // GET: Product
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString, string sortOrder)
         {
             var products = await _productRepository.GetAllAsync();
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                products = products
+                    .Where(p => p.Name != null && p.Name.ToLower().Contains(searchString.ToLower()))
+                    .ToList();
+            }
+            ViewBag.SearchString = searchString;
+            ViewBag.SortOrder = sortOrder;
+
+            products = sortOrder switch
+            {
+                "name_asc" => products.OrderBy(p => p.Name).ToList(),
+                "price_asc" => products.OrderBy(p => p.Price).ToList(),
+                "price_desc" => products.OrderByDescending(p => p.Price).ToList(),
+                _ => products.ToList()
+            };
+
             return View(products);
         }
 
@@ -141,27 +159,26 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View(product);
         }
 
-        // POST: Product/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirme([Bind("Id")] int id)
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null) return NotFound();
 
-            // Nếu có ảnh, xóa luôn ảnh khỏi thư mục wwwroot/images
+            // Xóa ảnh nếu có
             if (!string.IsNullOrEmpty(product.ImageUrl))
             {
                 var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", product.ImageUrl);
                 if (System.IO.File.Exists(imagePath))
-                {
                     System.IO.File.Delete(imagePath);
-                }
             }
 
             await _productRepository.DeleteAsync(id);
             return RedirectToAction(nameof(Index));
         }
+
+
 
     }
 }
