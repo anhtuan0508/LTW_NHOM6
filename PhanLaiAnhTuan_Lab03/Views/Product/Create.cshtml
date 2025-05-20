@@ -1,0 +1,63 @@
+﻿@model PhanLaiAnhTuan_Lab03.Models.Product
+
+@{
+    ViewData["Title"] = "Thêm sản phẩm mới";
+}
+
+<h2 class="mb-4">@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label asp-for="Name">Tên sản phẩm</label>
+        <input asp-for="Name" class="form-control" placeholder="Nhập tên sản phẩm" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Price">Giá </label>
+        <input asp-for="Price" class="form-control" placeholder="Nhập giá sản phẩm" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryId">Danh mục</label>
+        <select asp-for="CategoryId" class="form-control" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))">
+            <option value="">-- Chọn danh mục --</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Mô tả</label>
+        <textarea asp-for="Description" class="form-control" rows="4" placeholder="Nhập mô tả chi tiết"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Chọn ảnh sản phẩm</label>
+        <input type="file" name="imageFile" class="form-control-file" id="imageInput" />
+    </div>
+
+    <div class="form-group mb-3">
+        <label>Xem trước ảnh</label><br />
+        <img id="previewImage" src="https://via.placeholder.com/200x200.png?text=Chưa+có+ảnh" style="max-height:200px;" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Thêm sản phẩm</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
+
+@section Scripts {
+    <script>
+        document.getElementById("imageInput").addEventListener("change", function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById("previewImage").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

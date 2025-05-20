@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.Product>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
+
+<h1 class="mb-4">@ViewData["Title"]</h1>
+
+<div class="mb-3 d-flex justify-content-between">
+    <a asp-action="Create" class="btn btn-primary">➕ Thêm mới sản phẩm</a>
+    <a asp-controller="Categories" asp-action="Index" class="btn btn-success">📁 Quản lý danh mục</a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Ảnh</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+            <th>Danh mục</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+                <tr>
+                    <td>
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                                <img src="~/images/@item.ImageUrl" alt="@item.Name" style="max-height: 80px;" />
+                    }
+                    </td>
+                    <td>@item.Name</td>
+                    <td>@item.Price.ToString("C")</td>
+                    <td>@item.Category?.Name</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">🔍 Chi tiết</a>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">✏️ Sửa</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">🗑️ Xóa</a>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>
