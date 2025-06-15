@@ -1,0 +1,36 @@
+﻿@model PhanLaiAnhTuan_Lab03.Models.Order
+
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+}
+
+<h2>Chi tiết đơn hàng #@Model.Id</h2>
+
+<p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
+<p><strong>Địa chỉ:</strong> @Model.ShippingAddress</p>
+<p><strong>Ghi chú:</strong> @Model.Notes</p>
+<p><strong>Trạng thái:</strong> @Model.Status</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Tổng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderDetails)
+        {
+            <tr>
+                <td>@item.Product.Name</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@(item.Price * item.Quantity).ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="History" class="btn btn-secondary">Quay lại</a>

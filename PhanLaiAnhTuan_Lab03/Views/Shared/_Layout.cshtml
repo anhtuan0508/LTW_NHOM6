@@ -1,49 +1,678 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - PhanLaiAnhTuan_Lab03</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/PhanLaiAnhTuan_Lab03.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - PetShop</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --primary-hover: #1557b0;
+            --secondary-color: #34a853;
+            --accent-color: #ff6b35;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --border-color: #e8eaed;
+            --bg-light: #fafbfc;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* ============ HEADER STYLES ============ */
+        .announcement-bar {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #2d7d32 100%);
+            color: white;
+            padding: 8px 0;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+            .announcement-bar .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .announcement-bar .contact-info {
+                display: flex;
+                gap: 24px;
+                align-items: center;
+            }
+
+            .announcement-bar .shipping-info {
+                font-weight: 600;
+            }
+
+        .main-header {
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            padding: 16px 0;
+        }
+
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .navbar-brand:hover {
+                color: var(--primary-hover) !important;
+            }
+
+            .navbar-brand .logo-icon {
+                font-size: 36px;
+                background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+            .nav-btn:hover {
+                border-color: var(--primary-color);
+                color: var(--primary-color);
+                background: rgba(26, 115, 232, 0.04);
+                transform: translateY(-1px);
+            }
+
+            .nav-btn.primary {
+                background: var(--primary-color);
+                border-color: var(--primary-color);
+                color: white;
+            }
+
+                .nav-btn.primary:hover {
+                    background: var(--primary-hover);
+                    border-color: var(--primary-hover);
+                    color: white;
+                }
+
+        .cart-button {
+            position: relative;
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 12px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 48px;
+            height: 48px;
+        }
+
+            .cart-button:hover {
+                border-color: var(--primary-color);
+                color: var(--primary-color);
+                background: rgba(26, 115, 232, 0.04);
+                transform: translateY(-1px);
+            }
+
+        .cart-icon {
+            font-size: 20px;
+            transition: all 0.2s ease;
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            min-width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            border: 2px solid white;
+            box-shadow: var(--shadow-md);
+        }
+
+            .cart-badge.empty {
+                display: none;
+            }
+
+        .admin-dropdown {
+            position: relative;
+        }
+
+        .admin-btn {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            border: none;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+            .admin-btn:hover {
+                background: linear-gradient(135deg, #d97706, #b45309);
+                transform: translateY(-1px);
+                box-shadow: var(--shadow-md);
+            }
+
+        .dropdown-menu {
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+            border-radius: 12px;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        .dropdown-item {
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+            .dropdown-item:hover {
+                background: var(--bg-light);
+                color: var(--primary-color);
+            }
+
+        /* ============ MOBILE MENU ============ */
+        .navbar-toggler {
+            border: none;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+
+        .mobile-nav {
+            background: var(--bg-white);
+            border-top: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+            .mobile-nav .nav-actions {
+                flex-direction: column;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .mobile-nav .nav-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+        /* ============ MAIN CONTENT ============ */
+        .main-content {
+            min-height: calc(100vh - 200px);
+            padding: 0;
+        }
+
+        /* ============ FOOTER STYLES ============ */
+        .footer {
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 60px 0 30px;
+            margin-top: 80px;
+        }
+
+            .footer h5 {
+                color: white;
+                font-weight: 700;
+                margin-bottom: 24px;
+                font-size: 18px;
+            }
+
+            .footer .brand-section h5 {
+                color: var(--primary-color);
+                font-size: 24px;
+                font-weight: 800;
+            }
+
+            .footer p {
+                color: #b0b0b0;
+                line-height: 1.7;
+                margin-bottom: 24px;
+            }
+
+            .footer ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                .footer ul li {
+                    margin-bottom: 12px;
+                }
+
+            .footer a {
+                color: #b0b0b0;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.2s ease;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+                .footer a:hover {
+                    color: var(--primary-color);
+                }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+            .social-links a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                background: #333;
+                border-radius: 12px;
+                color: #b0b0b0;
+                font-size: 18px;
+                transition: all 0.2s ease;
+            }
+
+                .social-links a:hover {
+                    background: var(--primary-color);
+                    color: white;
+                    transform: translateY(-2px);
+                }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+            .footer-bottom p {
+                margin: 0;
+                color: #888;
+                font-size: 14px;
+            }
+
+        /* ============ RESPONSIVE DESIGN ============ */
+        @@media (max-width: 991.98px) {
+            .announcement-bar .container {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .announcement-bar .contact-info {
+                gap: 16px;
+            }
+
+            .navbar-brand {
+                font-size: 28px;
+            }
+
+                .navbar-brand .logo-icon {
+                    font-size: 32px;
+                }
+
+            .nav-actions {
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .footer {
+                padding: 40px 0 20px;
+                margin-top: 50px;
+            }
+
+                .footer .row > div {
+                    margin-bottom: 30px;
+                }
+        }
+
+        @@media (max-width: 575.98px) {
+            .announcement-bar .contact-info {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .nav-actions {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* ============ ANIMATIONS ============ */
+        @@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* ============ UTILITY CLASSES ============ */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            border: none;
+            color: white;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+            .btn-gradient:hover {
+                transform: translateY(-1px);
+                box-shadow: var(--shadow-md);
+                color: white;
+            }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PhanLaiAnhTuan_Lab03</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="bi bi-telephone-fill me-1"></i> Hotline: 1900-xxx-xxx</span>
+                <span><i class="bi bi-envelope-fill me-1"></i> info@petshop.vn</span>
+            </div>
+            <div class="shipping-info">
+                <i class="bi bi-truck me-1"></i> Miễn phí vận chuyển cho đơn hàng trên 500K
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="javascript:void(0)" style="pointer-events: none;">
+                    <span class="logo-icon">🐾</span>
+                    <span>PetShop</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="bi bi-list" style="font-size: 24px; color: var(--text-primary);"></i>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="nav-actions ms-auto">
+                        @if (User.IsInRole("Customer"))
+                        {
+                            <!-- Shopping Cart -->
+                            <a asp-controller="ShoppingCart" asp-action="Index" class="cart-button text-decoration-none">
+                                <i class="bi bi-bag-fill cart-icon"></i>
+                                @{
+                                    var cartCount = ViewBag.CartItemCount ?? 0;
+                                }
+                                @if (cartCount > 0)
+                                {
+                                    <span class="cart-badge">@cartCount</span>
+                                }
+                                else
+                                {
+                                    <span class="cart-badge empty">0</span>
+                                }
+                            </a>
+
+                            <a class="nav-btn" asp-controller="Order" asp-action="History">
+                                <i class="bi bi-clock-history"></i>
+                                <span>Lịch sử đơn hàng</span>
+                            </a>
+                        }
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <div class="dropdown admin-dropdown">
+                                <button class="admin-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-shield-check"></i>
+                                    <span>Quản trị</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="Order" asp-action="Index">
+                                            <i class="bi bi-box-seam me-2 text-primary"></i>
+                                            Quản lý đơn hàng
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" asp-area="Admin" asp-controller="UserManagement" asp-action="Index">
+                                            <i class="bi bi-people me-2 text-primary"></i>
+                                            Quản lý người dùng
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            &copy; 2025 - PhanLaiAnhTuan_Lab03 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="brand-section">
+                        <h5><i class="bi bi-heart-fill me-2"></i>PetShop Vietnam</h5>
+                        <p>Cửa hàng thú cưng hàng đầu Việt Nam, chuyên cung cấp thức ăn dinh dưỡng, phụ kiện cao cấp và dịch vụ chăm sóc thú cưng chuyên nghiệp với hơn 10 năm kinh nghiệm.</p>
+
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Sản phẩm</h5>
+                    <ul>
+                        <li><a href="#">Thức ăn cho chó</a></li>
+                        <li><a href="#">Thức ăn cho mèo</a></li>
+                        <li><a href="#">Phụ kiện thú cưng</a></li>
+                        <li><a href="#">Đồ chơi</a></li>
+                        <li><a href="#">Vệ sinh & Chăm sóc</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Hỗ trợ khách hàng</h5>
+                    <ul>
+                        <li><a href="#"><i class="bi bi-arrow-return-left me-2"></i>Chính sách đổi trả</a></li>
+                        <li><a href="#"><i class="bi bi-question-circle me-2"></i>Hướng dẫn mua hàng</a></li>
+                        <li><a href="#"><i class="bi bi-chat-dots me-2"></i>Câu hỏi thường gặp</a></li>
+                        <li><a href="#"><i class="bi bi-shield-check me-2"></i>Bảo hành sản phẩm</a></li>
+                        <li><a href="#"><i class="bi bi-headset me-2"></i>Tư vấn 24/7</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Thông tin liên hệ</h5>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+                                123 Đường Nguyễn Huệ, Quận 1, TP.HCM
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:1900000000">
+                                <i class="bi bi-telephone-fill me-2 text-success"></i>
+                                1900-xxx-xxx
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@petshop.vn">
+                                <i class="bi bi-envelope-fill me-2 text-info"></i>
+                                info@petshop.vn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="bi bi-clock-fill me-2 text-warning"></i>
+                                8:00 - 22:00 (Hàng ngày)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetShop Vietnam. Tất cả quyền được bảo lưu. | Thiết kế bởi AnhTuan</p>
+            </div>
         </div>
     </footer>
+
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        // Cart count update functionality
+        function updateCartCount() {
+            fetch('/ShoppingCart/GetCartCount', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const badge = document.querySelector('.cart-badge');
+                    if (badge) {
+                        if (data.count > 0) {
+                            badge.textContent = data.count;
+                            badge.classList.remove('empty');
+                        } else {
+                            badge.classList.add('empty');
+                        }
+                    }
+                })
+                .catch(error => console.log('Error updating cart count:', error));
+        }
+
+        // Initialize cart count on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            updateCartCount();
+
+                    // Add fade-in animation to main content
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+                mainContent.classList.add('fade-in-up');
+            }
+            });
+
+                // Update cart count when cart is modified
+                document.addEventListener('cartUpdated', function() {
+                    updateCartCount();
+                });
+
+                // Smooth scroll for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

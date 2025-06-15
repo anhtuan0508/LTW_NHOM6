@@ -1,12 +1,12 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
 
 @{
-    ViewData["Title"] = "Xóa sản phẩm";
+    ViewData["Title"] = "Xóa thú cưng";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<h3>Bạn có chắc muốn xóa sản phẩm này?</h3>
+<h3>Bạn có chắc muốn xóa thú cưng này?</h3>
 
 <div>
     <h4>@Model.Name</h4>
@@ -20,7 +20,7 @@
         <dt class="col-sm-2">Giá</dt>
         <dd class="col-sm-10">@Model.Price.ToString("C")</dd>
 
-        <dt class="col-sm-2">Danh mục</dt>
+        <dt class="col-sm-2">Loài</dt>
         <dd class="col-sm-10">@Model.Category?.Name</dd>
 
         <dt class="col-sm-2">Mô tả</dt>

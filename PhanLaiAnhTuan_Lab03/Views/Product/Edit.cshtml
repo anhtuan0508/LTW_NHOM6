@@ -1,59 +1,73 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
 
 @{
-    ViewData["Title"] = "Chỉnh sửa sản phẩm";
+    ViewData["Title"] = "Chỉnh sửa thú cưng";
 }
 
 <h2>@ViewData["Title"]</h2>
 
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
 <form asp-action="Edit" method="post" enctype="multipart/form-data">
     <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="ImageUrl" />
 
-    <div class="form-group">
-        <label asp-for="Name"></label>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Tên thú cưng</label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Price"></label>
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Giá</label>
         <input asp-for="Price" class="form-control" />
         <span asp-validation-for="Price" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="CategoryId">Danh mục</label>
-        <select asp-for="CategoryId" class="form-control"
-                asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))">
-            <option value="">-- Chọn danh mục --</option>
+    <div class="mb-3">
+        <label asp-for="CategoryId" class="form-label">Loài</label>
+        <select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))">
+            <option value="">-- Chọn loài --</option>
         </select>
         <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
-        <label asp-for="Description"></label>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Mô tả</label>
         <textarea asp-for="Description" class="form-control" rows="4"></textarea>
     </div>
 
-    <div class="form-group">
-        <label>Ảnh hiện tại</label><br />
+    <div class="mb-3">
+        <label class="form-label">Ảnh hiện tại</label><br />
         @if (!string.IsNullOrEmpty(Model.ImageUrl))
         {
-            <img id="previewImage" src="~/images/@Model.ImageUrl" style="max-height:200px;" />
+            <img id="previewImage" src="~/images/@Model.ImageUrl" class="img-thumbnail" style="max-height: 200px;" />
         }
         else
         {
-            <img id="previewImage" src="" alt="Chưa có ảnh" style="max-height:200px;" />
+            <img id="previewImage" src="https://via.placeholder.com/200x150?text=No+Image" class="img-thumbnail" />
         }
     </div>
 
-    <div class="form-group">
-        <label>Chọn ảnh mới</label>
-        <input type="file" name="imageFile" class="form-control-file" id="imageInput" />
+    <div class="mb-3">
+        <label class="form-label">Chọn ảnh mới (không bắt buộc)</label>
+        <input type="file" name="imageFile" class="form-control" id="imageInput" accept="image/*" />
     </div>
 
-    <button type="submit" class="btn btn-primary">Lưu</button>
-    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary">Lưu</button>
+        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    </div>
 </form>
 
 @section Scripts {
@@ -69,5 +83,6 @@
             }
         });
     </script>
+
     @await Html.PartialAsync("_ValidationScriptsPartial")
 }

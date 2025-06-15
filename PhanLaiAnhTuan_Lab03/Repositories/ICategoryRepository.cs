@@ -9,6 +9,8 @@ namespace PhanLaiAnhTuan_Lab03.Repositories
         Task AddCategoryAsync(Category category);
         Task UpdateCategoryAsync(Category category);
         Task DeleteCategoryAsync(int id);
+        Task<Category> GetCategoryByNameAsync(string name);
+
     }
 
 }

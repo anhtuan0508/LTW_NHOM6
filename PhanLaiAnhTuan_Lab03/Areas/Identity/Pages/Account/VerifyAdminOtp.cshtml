@@ -1,0 +1,29 @@
+﻿@page
+@model PhanLaiAnhTuan_Lab03.Areas.Identity.Pages.Account.VerifyAdminOtpModel
+@{
+    ViewData["Title"] = "Xác minh OTP";
+}
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="OtpCode" class="form-label">Mã OTP đã gửi qua email</label>
+        <input asp-for="OtpCode" class="form-control" />
+        <span asp-validation-for="OtpCode" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Xác minh</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

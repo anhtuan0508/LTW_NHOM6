@@ -1,15 +1,15 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Category
 
 @{
-    ViewData["Title"] = "Chỉnh sửa danh mục";
+    ViewData["Title"] = "Chỉnh sửa loài";
 }
 
-<h2 class="mt-4">Chỉnh sửa danh mục</h2>
+<h2 class="mt-4">Chỉnh sửa loài</h2>
 
 <form asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
     <div class="form-group">
-        <label asp-for="Name">Tên danh mục</label>
+        <label asp-for="Name">Tên loài</label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>

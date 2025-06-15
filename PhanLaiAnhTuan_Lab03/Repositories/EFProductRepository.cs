@@ -13,6 +13,13 @@ namespace PhanLaiAnhTuan_Lab03.Repositories
             _context = context;
         }
 
+        public async Task<IEnumerable<Product>> GetProductsByCategoryIdAsync(int categoryId)
+        {
+            return await _context.Products
+                .Where(p => p.CategoryId == categoryId)
+                .ToListAsync();
+        }
+
         public async Task<IEnumerable<Product>> GetAllAsync()
         {
             return await _context.Products.Include(p => p.Category).ToListAsync();
@@ -29,6 +36,7 @@ namespace PhanLaiAnhTuan_Lab03.Repositories
             await _context.SaveChangesAsync();
         }
 
+
         public async Task UpdateAsync(Product product)
         {
             _context.Products.Update(product);
@@ -41,6 +49,8 @@ namespace PhanLaiAnhTuan_Lab03.Repositories
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
         }
+
+
     }
 
 }

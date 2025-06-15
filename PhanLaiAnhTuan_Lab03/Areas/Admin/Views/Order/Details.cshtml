@@ -1,0 +1,43 @@
+﻿@model PhanLaiAnhTuan_Lab03.Models.Order
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4">Chi tiết đơn hàng #@Model.Id</h2>
+
+<div class="mb-3">
+    <p><strong>Khách hàng:</strong> @Model.FullName (@Model.ApplicationUser?.Email)</p>
+    <p><strong>Số điện thoại:</strong> @Model.PhoneNumber</p>
+    <p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
+    <p><strong>Địa chỉ:</strong> @Model.ShippingAddress</p>
+    <p><strong>Trạng thái:</strong> @Model.Status</p>
+</div>
+
+<table class="table table-bordered align-middle">
+    <thead class="table-light">
+        <tr>
+            <th style="width: 100px;">Ảnh</th>
+            <th>Tên thú cưng</th>
+            <th>Số lượng</th>
+            <th>Giá</th>
+            <th>Tổng</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderDetails)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/@item.Product.ImageUrl" alt="@item.Product.Name" style="width: 80px; height: 80px; object-fit: cover;" class="rounded shadow-sm" />
+                </td>
+                <td>@item.Product.Name</td>
+                <td>@item.Quantity</td>
+                <td class="text-danger">@item.Price.ToString("C")</td>
+                <td class="fw-bold">@((item.Price * item.Quantity).ToString("C"))</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-outline-secondary">← Quay lại</a>

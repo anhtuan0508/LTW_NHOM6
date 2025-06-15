@@ -44,6 +44,12 @@ namespace PhanLaiAnhTuan_Lab03.Repositories
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<Category> GetCategoryByNameAsync(string name)
+        {
+            return await _context.Categories.FirstOrDefaultAsync(c => c.Name == name);
+        }
+
     }
 
 

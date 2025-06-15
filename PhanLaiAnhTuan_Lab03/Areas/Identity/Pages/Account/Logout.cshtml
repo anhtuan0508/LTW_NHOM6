@@ -1,0 +1,31 @@
+﻿@page
+@model PhanLaiAnhTuan_Lab03.Areas.Identity.Pages.Account.LogoutModel
+
+@{
+    ViewData["Title"] = "Đăng xuất";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white text-center">
+                    <h2 class="mb-0">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body">
+                    <header>
+                        <h4 class="text-center mb-4">Bạn có chắc chắn muốn đăng xuất?</h4>
+                    </header>
+                    <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="/Identity/Account/Register">
+                        <div class="text-center mb-4">
+                            <button type="submit" class="btn btn-danger btn-lg py-2 w-100">Đăng xuất ngay</button>
+                        </div>
+                        <div class="text-center">
+                            <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-outline-secondary btn-lg w-100">Quay lại đăng nhập</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,97 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Đăng nhập";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white text-center">
+                    <h2 class="mb-0">@ViewData["Title"]</h2>
+                </div>
+                <div class="card-body">
+                    <section>
+                        <h4 class="text-center mb-4">Sử dụng tài khoản cục bộ để đăng nhập</h4>
+                        <hr />
+                        <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                        <form id="account" method="post">
+                            <div class="mb-4">
+                                <label asp-for="Input.Email" class="form-label">Email</label>
+                                <input asp-for="Input.Email" class="form-control form-control-lg" autocomplete="username" aria-required="true" placeholder="Nhập email" />
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4">
+                                <label asp-for="Input.Password" class="form-label">Mật khẩu</label>
+                                <input asp-for="Input.Password" type="password" class="form-control form-control-lg" autocomplete="current-password" aria-required="true" placeholder="Nhập mật khẩu" />
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                            <div class="mb-4 form-check">
+                                <input class="form-check-input" asp-for="Input.RememberMe" />
+                                <label class="form-check-label" asp-for="Input.RememberMe">
+                                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                </label>
+                            </div>
+                            <div class="mb-4">
+                                <button id="login-submit" type="submit" class="w-100 btn btn-primary btn-lg py-2">Đăng nhập</button>
+                            </div>
+                            <div class="text-center">
+                                <p>
+                                    <a id="forgot-password" asp-page="./ForgotPassword">Quên mật khẩu?</a>
+                                </p>
+                                <p>
+                                    <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Đăng ký tài khoản mới</a>
+                                </p>
+                                <p>
+                                    <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Gửi lại xác nhận email</a>
+                                </p>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow-sm mt-4 mt-md-0">
+                <div class="card-header bg-secondary text-white text-center">
+                    <h3 class="mb-0">Sử dụng dịch vụ khác để đăng nhập</h3>
+                </div>
+                <div class="card-body">
+                    <section>
+                        <hr />
+                        @{
+                            if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                            {
+                                <div class="text-center">
+                                    <p>
+                                        Hiện không có dịch vụ xác thực bên ngoài được cấu hình. Xem bài viết này
+                                        <a href="https://go.microsoft.com/fwlink/?LinkID=532715">về cách thiết lập ứng dụng ASP.NET để hỗ trợ đăng nhập qua dịch vụ bên ngoài</a>.
+                                    </p>
+                                </div>
+                            }
+                            else
+                            {
+                                <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-center">
+                                    <div>
+                                        <p>
+                                            @foreach (var provider in Model.ExternalLogins!)
+                                            {
+                                                <button type="submit" class="btn btn-outline-primary m-2" name="provider" value="@provider.Name" title="Đăng nhập bằng tài khoản @provider.DisplayName">@provider.DisplayName</button>
+                                            }
+                                        </p>
+                                    </div>
+                                </form>
+                            }
+                        }
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

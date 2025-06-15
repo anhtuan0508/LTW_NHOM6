@@ -1,89 +1,416 @@
 ﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.Product>
-
 @{
-    ViewData["Title"] = "Danh sách sản phẩm";
+    ViewData["Title"] = "Quản lý thú cưng";
     string currentSort = ViewBag.SortOrder as string;
     string currentSearch = ViewBag.SearchString as string;
 }
 
-<h1 class="mb-4">@ViewData["Title"]</h1>
+<style>
+    .page-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
-<div class="mb-3 d-flex justify-content-between">
-    <a asp-action="Create" class="btn btn-primary">➕ Thêm mới sản phẩm</a>
-    <a asp-controller="Categories" asp-action="Index" class="btn btn-success">📁 Quản lý danh mục</a>
-</div>
+    .page-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin: 0;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
 
-<form asp-action="Index" method="get" class="mb-3">
-    <div class="row g-2">
-        <div class="col-md-6">
-            <input type="text" name="searchString" value="@currentSearch" class="form-control" placeholder="Tìm sản phẩm...">
-        </div>
-        <div class="col-md-4">
-            <select name="sortOrder" class="form-select" onchange="this.form.submit()">
-                <option value="">-- Sắp xếp --</option>
-                @if (currentSort == "name_asc")
-                {
-                    <option value="name_asc" selected>Tên A-Z</option>
-                }
-                else
-                {
-                    <option value="name_asc">Tên A-Z</option>
-                }
+    .action-buttons {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
 
-                @if (currentSort == "price_asc")
-                {
-                    <option value="price_asc" selected>Giá tăng dần</option>
-                }
-                else
-                {
-                    <option value="price_asc">Giá tăng dần</option>
-                }
+    .search-section {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+    }
 
-                @if (currentSort == "price_desc")
-                {
-                    <option value="price_desc" selected>Giá giảm dần</option>
-                }
-                else
-                {
-                    <option value="price_desc">Giá giảm dần</option>
-                }
-            </select>
-        </div>
-        <div class="col-md-2">
-            <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+    .search-title {
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .btn-modern {
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: none;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .btn-primary-modern {
+        background: linear-gradient(45deg, #4CAF50, #45a049);
+        color: white;
+    }
+
+        .btn-primary-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+        }
+
+    .btn-secondary-modern {
+        background: linear-gradient(45deg, #6c757d, #5a6268);
+        color: white;
+    }
+
+        .btn-secondary-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(108, 117, 125, 0.4);
+        }
+
+    .btn-info-modern {
+        background: linear-gradient(45deg, #17a2b8, #138496);
+        color: white;
+    }
+
+        .btn-info-modern:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(23, 162, 184, 0.4);
+        }
+
+    .table-container {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .table-modern {
+        margin: 0;
+        border: none;
+    }
+
+        .table-modern thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+            .table-modern thead th {
+                border: none;
+                font-weight: 600;
+                padding: 1rem;
+                text-align: center;
+                letter-spacing: 0.5px;
+            }
+
+        .table-modern tbody tr {
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+            .table-modern tbody tr:hover {
+                background-color: #f8f9fa;
+                transform: scale(1.01);
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            }
+
+        .table-modern td {
+            padding: 1rem;
+            vertical-align: middle;
+            border: none;
+            text-align: center;
+        }
+
+    .pet-image {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 3px solid #e9ecef;
+        transition: all 0.3s ease;
+    }
+
+        .pet-image:hover {
+            transform: scale(1.1);
+            border-color: #667eea;
+        }
+
+    .pet-name {
+        font-weight: 600;
+        color: #333;
+        font-size: 1.1rem;
+    }
+
+    .pet-price {
+        font-weight: 700;
+        color: #28a745;
+        font-size: 1.1rem;
+    }
+
+    .pet-category {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .action-buttons-cell {
+        white-space: nowrap;
+    }
+
+        .action-buttons-cell .btn {
+            margin: 0 2px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+        }
+
+    .btn-view {
+        background: linear-gradient(45deg, #17a2b8, #138496);
+        border: none;
+        color: white;
+    }
+
+    .btn-edit {
+        background: linear-gradient(45deg, #ffc107, #e0a800);
+        border: none;
+        color: #212529;
+    }
+
+    .btn-delete {
+        background: linear-gradient(45deg, #dc3545, #c82333);
+        border: none;
+        color: white;
+    }
+
+        .btn-view:hover, .btn-edit:hover, .btn-delete:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+    .form-control-modern {
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        padding: 0.75rem;
+        transition: all 0.3s ease;
+    }
+
+        .form-control-modern:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+    .form-select-modern {
+        border-radius: 8px;
+        border: 2px solid #e9ecef;
+        padding: 0.75rem;
+        transition: all 0.3s ease;
+    }
+
+        .form-select-modern:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+        }
+
+    .empty-state {
+        text-align: center;
+        padding: 3rem;
+        color: #6c757d;
+    }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #dee2e6;
+        }
+
+    /* Mobile responsive styles handled by Bootstrap classes */
+</style>
+
+<div class="container-fluid">
+    <!-- Header Section -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="page-title d-none d-md-block">
+                <i class="fas fa-paw"></i> @ViewData["Title"]
+            </h1>
+            <h1 class="d-md-none text-center" style="font-size: 2rem; font-weight: 700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+                <i class="fas fa-paw"></i> @ViewData["Title"]
+            </h1>
         </div>
     </div>
-</form>
 
-<table class="table table-bordered table-striped">
-    <thead class="thead-dark">
-        <tr>
-            <th>Ảnh</th>
-            <th>Tên sản phẩm</th>
-            <th>Giá</th>
-            <th>Danh mục</th>
-            <th>Hành động</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
+    <!-- Admin Actions -->
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="action-buttons">
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <a asp-controller="Product" asp-action="Create" class="btn btn-primary-modern btn-modern w-100">
+                        <i class="fas fa-plus"></i> Thêm thú cưng mới
+                    </a>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <a asp-area="Admin" asp-controller="UserManagement" asp-action="CreateEmployee" class="btn btn-secondary-modern btn-modern w-100">
+                        <i class="fas fa-user-plus"></i> Tạo tài khoản nhân viên
+                    </a>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <a asp-controller="Categories" asp-action="Index" class="btn btn-info-modern btn-modern w-100">
+                        <i class="fas fa-folder"></i> Quản lý danh mục
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Search Section -->
+    <div class="search-section">
+        <h5 class="search-title">
+            <i class="fas fa-search"></i> Tìm kiếm và lọc
+        </h5>
+        <form asp-action="Index" method="get">
+            <div class="row g-3">
+                <div class="col-md-5">
+                    <input type="text" name="searchString" value="@currentSearch"
+                           class="form-control form-control-modern"
+                           placeholder="🔍 Nhập tên thú cưng để tìm kiếm...">
+                </div>
+                <div class="col-md-4">
+                    <select name="sortOrder" class="form-select form-select-modern" onchange="this.form.submit()">
+                        <option value="">📊 Chọn cách sắp xếp</option>
+                        <option value="name_asc" selected="@((currentSort == "name_asc").ToString())">🔤 Tên A-Z</option>
+                        <option value="price_asc" selected="@((currentSort == "price_asc").ToString())">💰 Giá thấp đến cao</option>
+                        <option value="price_desc" selected="@((currentSort == "price_desc").ToString())">💎 Giá cao đến thấp</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <button type="submit" class="btn btn-primary-modern btn-modern w-100">
+                        <i class="fas fa-search"></i> Tìm kiếm
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-container">
+        @if (Model.Any())
         {
-            <tr>
-                <td>
-                    @if (!string.IsNullOrEmpty(item.ImageUrl))
-                    {
-                        <img src="~/images/@item.ImageUrl" alt="@item.Name" style="max-height: 80px;" />
-                    }
-                </td>
-                <td>@item.Name</td>
-                <td>@item.Price.ToString("C")</td>
-                <td>@(item.Category?.Name ?? "Chưa có danh mục")</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">🔍 Chi tiết</a>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">✏️ Sửa</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">🗑️ Xóa</a>
-                </td>
-            </tr>
+            <div class="table-responsive">
+                <table class="table table-modern">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-image"></i> Hình ảnh</th>
+                            <th><i class="fas fa-tag"></i> Tên thú cưng</th>
+                            <th><i class="fas fa-dollar-sign"></i> Giá bán</th>
+                            <th><i class="fas fa-layer-group"></i> Danh mục</th>
+                            <th><i class="fas fa-cogs"></i> Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                    {
+                                        <img src="~/images/@item.ImageUrl" alt="@item.Name"
+                                             class="pet-image d-none d-md-block" />
+                                        <img src="~/images/@item.ImageUrl" alt="@item.Name"
+                                             class="d-md-none" style="width: 50px; height: 50px; object-fit: cover; border-radius: 50%; border: 2px solid #e9ecef;" />
+                                    }
+                                    else
+                                    {
+                                        <div class="pet-image d-flex align-items-center justify-content-center bg-light d-none d-md-flex">
+                                            <i class="fas fa-paw text-muted"></i>
+                                        </div>
+                                        <div class="d-md-none d-flex align-items-center justify-content-center bg-light"
+                                             style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #e9ecef;">
+                                            <i class="fas fa-paw text-muted"></i>
+                                        </div>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="pet-name">@item.Name</div>
+                                </td>
+                                <td>
+                                    <div class="pet-price">@item.Price.ToString("C")</div>
+                                </td>
+                                <td>
+                                    <span class="pet-category">@(item.Category?.Name ?? "Chưa phân loại")</span>
+                                </td>
+                                <td class="action-buttons-cell">
+                                    <div class="d-flex flex-wrap justify-content-center gap-1">
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-view btn-sm" title="Xem chi tiết">
+                                                <i class="fas fa-eye d-none d-sm-inline"></i>
+                                                <span class="d-sm-none">Xem</span>
+                                            </a>
+                                        }
+                                        @if (User.IsInRole("Admin") || User.IsInRole("Employee"))
+                                        {
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-edit btn-sm" title="Chỉnh sửa">
+                                                <i class="fas fa-edit d-none d-sm-inline"></i>
+                                                <span class="d-sm-none">Sửa</span>
+                                            </a>
+                                        }
+                                        @if (User.IsInRole("Admin"))
+                                        {
+                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-delete btn-sm" title="Xóa"
+                                               onclick="return confirm('Bạn có chắc chắn muốn xóa thú cưng này?')">
+                                                <i class="fas fa-trash d-none d-sm-inline"></i>
+                                                <span class="d-sm-none">Xóa</span>
+                                            </a>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         }
-    </tbody>
-</table>
+        else
+        {
+            <div class="empty-state">
+                <i class="fas fa-search"></i>
+                <h4>Không tìm thấy thú cưng nào</h4>
+                <p class="text-muted">Hãy thử thay đổi từ khóa tìm kiếm hoặc bộ lọc</p>
+                @if (User.IsInRole("Admin"))
+                {
+                    <a asp-controller="Product" asp-action="Create" class="btn btn-primary-modern btn-modern mt-3">
+                        <i class="fas fa-plus"></i> Thêm thú cưng đầu tiên
+                    </a>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<script>
+    // Thêm hiệu ứng loading khi submit form
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchForm = document.querySelector('form[asp-action="Index"]');
+        if (searchForm) {
+            searchForm.addEventListener('submit', function () {
+                const submitBtn = this.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang tìm...';
+                submitBtn.disabled = true;
+            });
+        }
+    });
+</script>

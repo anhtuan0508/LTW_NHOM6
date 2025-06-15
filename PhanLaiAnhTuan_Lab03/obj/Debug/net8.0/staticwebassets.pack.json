@@ -5,24 +5,108 @@
       "PackagePath": "staticwebassets\\PhanLaiAnhTuan_Lab03.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\custom.css",
+      "PackagePath": "staticwebassets\\css\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\css\\fontawesome.min.css"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.css",
+      "PackagePath": "staticwebassets\\css\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.min.css",
+      "PackagePath": "staticwebassets\\css\\slick-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick.min.css",
+      "PackagePath": "staticwebassets\\css\\slick.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.css",
+      "PackagePath": "staticwebassets\\css\\templatemo.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.min.css",
+      "PackagePath": "staticwebassets\\css\\templatemo.min.css"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\0fb7dad2-8411-4057-a878-a0c2eaa47d94_may-anh-canon-eos-r100-lens-1845mm.jpg",
-      "PackagePath": "staticwebassets\\images\\0fb7dad2-8411-4057-a878-a0c2eaa47d94_may-anh-canon-eos-r100-lens-1845mm.jpg"
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg",
+      "PackagePath": "staticwebassets\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\a5d1b1db-b30e-4d1a-ac8b-66a05e018cda_images (1).jpg",
-      "PackagePath": "staticwebassets\\images\\a5d1b1db-b30e-4d1a-ac8b-66a05e018cda_images (1).jpg"
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg",
+      "PackagePath": "staticwebassets\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg",
+      "PackagePath": "staticwebassets\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg",
+      "PackagePath": "staticwebassets\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg",
+      "PackagePath": "staticwebassets\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh1.png",
+      "PackagePath": "staticwebassets\\images\\hinh1.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh3.jpeg",
+      "PackagePath": "staticwebassets\\images\\hinh3.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\custom.js",
+      "PackagePath": "staticwebassets\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-migrate-1.2.1.min.js"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.js",
+      "PackagePath": "staticwebassets\\js\\templatemo.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.min.js",
+      "PackagePath": "staticwebassets\\js\\templatemo.min.js"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\LICENSE",

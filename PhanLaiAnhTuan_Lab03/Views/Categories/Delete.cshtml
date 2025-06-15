@@ -1,12 +1,26 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Category
 
 @{
-    ViewData["Title"] = "Xóa danh mục";
+    ViewData["Title"] = "Xóa loài";
 }
 
-<h2 class="mt-4">Xóa danh mục</h2>
+<h2>@ViewData["Title"]</h2>
 
-<h4>Bạn có chắc chắn muốn xóa danh mục: <strong>@Model.Name</strong>?</h4>
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<h3>Bạn có chắc muốn xóa loài này?</h3>
+
+<div>
+    <h4>@Model.Name</h4>
+</div>
 
 <form asp-action="DeleteConfirmed" method="post">
     <input type="hidden" asp-for="Id" />

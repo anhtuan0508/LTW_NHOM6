@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "Quản lý người dùng";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var roles = ViewBag.UserRoles as Dictionary<string, IList<string>>;
+}
+
+<h2>Quản lý người dùng</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Họ tên</th>
+            <th>Role</th>
+            <th>Trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            var userRoles = roles[user.Id];
+            bool isAdmin = userRoles.Contains("Admin");
+
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.FullName</td>
+                <td>@string.Join(", ", userRoles)</td>
+                <td>
+                    @(user.LockoutEnd != null && user.LockoutEnd > DateTime.UtcNow ? "Đã bị khóa" : "Hoạt động")
+                </td>
+                <td>
+                    @if (!isAdmin)
+                    {
+                        @if (user.LockoutEnd != null && user.LockoutEnd > DateTime.UtcNow)
+                        {
+                            <a asp-action="Enable" asp-route-id="@user.Id" class="btn btn-success btn-sm">Mở khóa</a>
+                        }
+                        else
+                        {
+                            <a asp-action="Disable" asp-route-id="@user.Id" class="btn btn-warning btn-sm">Vô hiệu hóa</a>
+                        }
+
+                        <form asp-action="Delete" asp-route-id="@user.Id" method="post" class="d-inline" onsubmit="return confirm('Xác nhận xóa người dùng này?');">
+                            <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-muted">[Admin]</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

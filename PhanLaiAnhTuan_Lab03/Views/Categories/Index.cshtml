@@ -1,20 +1,20 @@
 ﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.Category>
 
 @{
-    ViewData["Title"] = "Danh sách danh mục";
+    ViewData["Title"] = "Danh sách loài";
 }
 
-<h2 class="mt-4">Danh sách danh mục</h2>
+<h2 class="mt-4">Danh sách loài</h2>
 
 
-<a asp-controller="Product" asp-action="Index" class="btn btn-secondary mb-3">Quay lại danh sách sản phẩm</a>
+<a asp-controller="Product" asp-action="Index" class="btn btn-secondary mb-3">Quay lại danh sách loài</a>
 
-<a asp-action="Create" class="btn btn-primary mb-3">Thêm danh mục</a>
+<a asp-action="Create" class="btn btn-primary mb-3">Thêm loài</a>
 
 <table class="table table-bordered table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>Tên danh mục</th>
+            <th>Tên loài</th>
             <th>Hành động</th>
         </tr>
     </thead>
