@@ -1,7 +1,14 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
 
+@* ✅ Thêm dòng dưới để có thể sử dụng lớp Category *@
+@using PhanLaiAnhTuan_Lab03.Models
+
 @{
     ViewData["Title"] = "Thêm thú cưng mới";
+
+    // ✅ THÊM: Ép kiểu ViewBag về List<Category> để tránh lỗi CS1977 khi dùng LINQ
+    var parentCategories = ViewBag.ParentCategories as List<Category>;
+    var allCategories = ViewBag.AllCategories as List<Category>;
 }
 
 <h1 class="mb-4 text-primary">@ViewData["Title"]</h1>
@@ -34,9 +41,21 @@
 
         <div class="col-md-6">
             <label asp-for="CategoryId" class="form-label fw-semibold">Loài</label>
-            <select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))" required>
+
+            @* ✅ ĐÃ SỬA: thay vì dùng asp-items, ta dùng thẻ <select> và optgroup để hiển thị danh mục cha - con *@
+            <select asp-for="CategoryId" class="form-select" required>
                 <option value="">-- Chọn loài --</option>
+                @foreach (var parent in parentCategories)
+                {
+                    <optgroup label="@parent.Name">
+                        @foreach (var child in allCategories.Where(c => c.ParentCategoryId == parent.Id))
+                        {
+                            <option value="@child.Id">@child.Name</option>
+                        }
+                    </optgroup>
+                }
             </select>
+
             <div class="invalid-feedback">
                 @Html.ValidationMessageFor(m => m.CategoryId)
             </div>
@@ -60,9 +79,8 @@
 </form>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @* (không thay đổi gì ở phần script Razor) *@
+    @await Html.PartialAsync("_ValidationScriptsPartial")
 
     <script>
         // Bootstrap 5 form validation
@@ -78,7 +96,7 @@
                     form.classList.add('was-validated')
                 }, false)
             })
-        })()
+        })();
 
         // Xem trước ảnh khi chọn file
         document.getElementById('imageFile').addEventListener('change', function (event) {

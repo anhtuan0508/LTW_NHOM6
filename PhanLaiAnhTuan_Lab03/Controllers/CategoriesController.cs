@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PhanLaiAnhTuan_Lab03.Models;
 using PhanLaiAnhTuan_Lab03.Repositories;
 using System.Threading.Tasks;
@@ -34,8 +35,15 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         // GET: /Categories/Add
         public IActionResult Create()
         {
+            // Lọc chỉ các danh mục cha (loài chính)
+            var parentCategories = _categoryRepository.GetAllCategoriesAsync().Result
+                .Where(c => c.ParentCategoryId == null);
+
+            ViewBag.CategoryList = new SelectList(parentCategories, "Id", "Name");
+
             return View();
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -46,8 +54,13 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
                 await _categoryRepository.AddCategoryAsync(category);
                 return RedirectToAction(nameof(Index));
             }
+            // ✅ THÊM lại ViewBag nếu lỗi validate
+            ViewBag.CategoryList = new SelectList(await _categoryRepository.GetAllCategoriesAsync(), "Id", "Name");
             return View(category);
         }
+   
+        //  them đoạn xác nhận sửa
+
         public async Task<IActionResult> Edit(int id)
         {
             var category = await _categoryRepository.GetCategoryById(id);
@@ -55,9 +68,15 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             {
                 return NotFound();
             }
+
+            // ✅ Lấy tất cả danh mục khác (trừ chính nó) để chọn làm danh mục cha
+            var allCategories = await _categoryRepository.GetAllCategoriesAsync();
+            ViewBag.AllCategories = allCategories.Where(c => c.Id != category.Id).ToList();
+
             return View(category);
         }
 
+        // POST: Category/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Category category)
@@ -67,6 +86,11 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
                 await _categoryRepository.UpdateCategoryAsync(category);
                 return RedirectToAction(nameof(Index));
             }
+
+            // ✅ Gửi lại danh sách danh mục cha nếu ModelState không hợp lệ
+            var allCategories = await _categoryRepository.GetAllCategoriesAsync();
+            ViewBag.AllCategories = allCategories.Where(c => c.Id != category.Id).ToList();
+
             return View(category);
         }
 
@@ -123,9 +147,6 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
 
             return RedirectToAction(nameof(Index));
         }
-
-
-
 
 
 

@@ -115,11 +115,16 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             await _productRepository.AddAsync(product);
             return RedirectToAction(nameof(Index));
         }
+
+
+        //them ơ day ne
         private async Task LoadCategoriesToViewBag()
         {
-            var categories = await _categoryRepository.GetAllCategoriesAsync();
-            ViewBag.Categories = categories;
+            var allCategories = await _categoryRepository.GetAllCategoriesAsync();
+            ViewBag.ParentCategories = allCategories.Where(c => c.ParentCategoryId == null).ToList();
+            ViewBag.AllCategories = allCategories;
         }
+
 
         private async Task<string> SaveImageAsync(IFormFile imageFile)
         {

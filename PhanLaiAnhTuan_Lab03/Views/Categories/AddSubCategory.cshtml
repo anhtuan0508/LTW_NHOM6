@@ -1,0 +1,21 @@
+﻿@model PhanLaiAnhTuan_Lab03.Models.Category
+@{
+    ViewData["Title"] = "Thêm danh mục con";
+}
+
+<h2>Thêm danh mục con cho @ViewBag.ParentCategory.Name</h2>
+
+<form asp-action="AddSubCategory" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Tên danh mục con</label>
+        <input asp-for="Name" class="form-control" />
+        <input type="hidden" name="parentId" value="@ViewBag.ParentCategory.Id" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
