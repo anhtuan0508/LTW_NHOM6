@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Trang chủ";
     string currentSearch = ViewBag.CurrentSearch as string;
+
 }
 
 <style>
@@ -44,7 +45,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
         opacity: 0.3;
     }
 
@@ -493,12 +494,12 @@
                 <h4 class="mb-4 gradient-text">
                     <i class="bi bi-search me-2"></i>Tìm kiếm thú cưng yêu thích
                 </h4>
-                <form method="get" asp-action="Index">
+                <form method="get" asp-action="Index" asp-controller="Home">
                     <div class="input-group input-group-lg">
                         <span class="input-group-text bg-white border-end-0">
                             <i class="bi bi-search text-primary"></i>
                         </span>
-                        <input type="text" name="searchString" value="@currentSearch"
+                        <input type="text" id="searchInput" name="searchString" value="@currentSearch"
                                class="form-control border-start-0 ps-2"
                                placeholder="Nhập tên thú cưng bạn muốn tìm..." />
                         <button type="submit" class="btn btn-custom-primary">
@@ -515,6 +516,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- 🎛️ BỘ LỌC -->
     <div class="filter-card fade-in">
@@ -553,7 +555,7 @@
             <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="card product-card h-100 fade-in">
                     <div class="product-image" style="height: 250px;">
-                        <img src="~/images/@item.ImageUrl"
+                        <img src="@Url.Content("~/images/" + item.ImageUrl)"
                              class="card-img-top w-100 h-100"
                              style="object-fit: cover;"
                              alt="@item.Name" />
@@ -603,84 +605,220 @@
     }
 </div>
 
-<script>
-    // Enhanced animations and interactions
-    document.addEventListener('DOMContentLoaded', function () {
-        // Intersection Observer for fade-in animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+@section Scripts {
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 
-        // Observe all fade-in elements
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+    <style>
+        .autocomplete-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        // Enhanced hover effects for product cards
-        document.querySelectorAll('.product-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-            });
-        });
+        .autocomplete-delete {
+            color: red;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+    </style>
 
-        // Smooth scroll for any anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+    <script>
+        $(document).ready(function () {
+            $("#searchInput").autocomplete({
+                source: function (request, response) {
+                    const term = request.term || "";
+                    let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
+
+                    const filteredHistory = history
+                        .filter(item => item.toLowerCase().includes(term.toLowerCase()))
+                        .map(item => ({ label: item, value: item, isHistory: true }));
+
+                    $.ajax({
+                        url: "/Home/GetSuggestions",
+                        type: "GET",
+                        data: { term: term },
+                        dataType: "json",
+                        success: function (serverData) {
+                            const filteredServer = serverData
+                                .filter(item => !history.includes(item.value))
+                                .map(item => ({ ...item, isHistory: false }));
+
+                            const finalSuggestions = [...filteredHistory, ...filteredServer];
+                            response(finalSuggestions);
+                        },
+                        error: function () {
+                            response(filteredHistory);
+                        }
                     });
-                }
-            });
-        });
+                },
+                minLength: 0,
+                select: function (event, ui) {
+                    if ($(event.originalEvent.target).hasClass('autocomplete-delete')) {
+                        return false; // Bấm dấu x thì không thực hiện select
+                    }
 
-        // Add loading states for forms
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function() {
-                const submitBtn = this.querySelector('button[type="submit"]');
-                if (submitBtn) {
-                    submitBtn.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Đang xử lý...';
-                    submitBtn.disabled = true;
+                    const keyword = ui.item.value;
+                    $("#searchInput").val(keyword);
+                    $("#searchInput").closest("form").submit();
+
+                    saveToHistory(keyword);
+                    return false;
+                }
+            }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                const $li = $("<li>").addClass("autocomplete-item");
+
+                const $label = $("<div>")
+                    .html((item.isHistory ? "<i class='bi bi-clock-history me-1 text-secondary'></i>" : "") + item.label)
+                    .addClass("p-2")
+                    .css("flex-grow", "1");
+
+                $li.append($label);
+
+                if (item.isHistory) {
+                    const $deleteBtn = $("<span>")
+                        .addClass("autocomplete-delete p-2")
+                        .text("×")
+                        .click(function (e) {
+                            e.stopPropagation();
+                            removeFromHistory(item.label);
+                            $li.remove();
+                        });
+
+                    $li.append($deleteBtn);
+                }
+
+                return $li.appendTo(ul);
+            };
+
+            $("#searchInput").on("focus", function () {
+                if ($(this).val() === "") {
+                    $(this).autocomplete("search", "");
                 }
             });
+
+            $("#searchInput").closest("form").on("submit", function () {
+                const keyword = $("#searchInput").val().trim();
+                if (keyword.length > 0) {
+                    saveToHistory(keyword);
+                }
+            });
+
+            function saveToHistory(keyword) {
+                let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
+                history = history.filter(item => item.toLowerCase() !== keyword.toLowerCase());
+                history.unshift(keyword);
+                history = history.slice(0, 5);
+                localStorage.setItem("searchHistory", JSON.stringify(history));
+            }
+
+            function removeFromHistory(keyword) {
+                let history = JSON.parse(localStorage.getItem("searchHistory")) || [];
+                history = history.filter(item => item.toLowerCase() !== keyword.toLowerCase());
+                localStorage.setItem("searchHistory", JSON.stringify(history));
+            }
+
+            // === Các đoạn script hiện có của bạn ===
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                });
+                card.addEventListener('mouseleave', function () {
+                    this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                });
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function () {
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    if (submitBtn) {
+                        submitBtn.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Đang xử lý...';
+                        submitBtn.disabled = true;
+                    }
+                });
+            });
+
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.classList.remove('loading-shimmer');
+                                imageObserver.unobserve(img);
+                            }
+                        }
+                    });
+                });
+
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    img.classList.add('loading-shimmer');
+                    imageObserver.observe(img);
+                });
+            }
+        });
+    </script>
+}
+
+
+
+<!-- Chatbox -->
+<div id="chatBox" class="chat-box d-none">
+    <form asp-action="Chat" method="post">
+        <div id="chatHistory">
+            @if (ViewBag.History != null)
+            {
+                foreach (var item in ViewBag.History)
+                {
+                    <div class="chat-bubble user"><strong>Bạn:</strong> @item.User</div>
+                    <div class="chat-bubble ai"><strong>AI:</strong> @item.AI</div>
+                }
+            }
+        </div>
+        <textarea name="userMessage" class="form-control mt-2" placeholder="Nhập tin nhắn..." required></textarea>
+        <button type="submit" class="btn btn-primary mt-2 w-100">Gửi</button>
+    </form>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.getElementById("chatToggleBtn");
+        const chatBox = document.getElementById("chatBox");
+
+        toggleBtn.addEventListener("click", function () {
+            chatBox.classList.toggle("d-none");
         });
     });
-
-    // Performance optimization: Lazy loading for images
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.classList.remove('loading-shimmer');
-                        imageObserver.unobserve(img);
-                    }
-                }
-            });
-        });
-
-        // For future implementation of lazy loading
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            img.classList.add('loading-shimmer');
-            imageObserver.observe(img);
-        });
-    }
 </script>

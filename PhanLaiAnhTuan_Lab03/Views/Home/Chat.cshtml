@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Tư vấn chăm sóc thú cưng";
+    var history = ViewBag.History as List<(string User, string AI)>;
+}
+
+<h2 class="mb-4">💬 Tư vấn chăm sóc thú cưng</h2>
+
+<div class="chat-container" style="max-width: 600px; margin: auto;">
+    <div class="chat-box" style="border: 1px solid #ccc; border-radius: 10px; padding: 15px; background: #f9f9f9; min-height: 300px;">
+        @if (history != null && history.Any())
+        {
+            foreach (var msg in history)
+            {
+                <div class="user-msg" style="text-align: right; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: #007bff; color: white; padding: 10px 15px; border-radius: 20px;">
+                        @msg.User
+                    </div>
+                </div>
+                <div class="ai-msg" style="text-align: left; margin-bottom: 10px;">
+                    <div style="display: inline-block; background: #e9ecef; color: black; padding: 10px 15px; border-radius: 20px;">
+                        @Html.Raw(msg.AI)
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>💡 Hãy đặt câu hỏi để bắt đầu trò chuyện với AI!</p>
+        }
+    </div>
+
+    <form asp-action="Chat" method="post" class="mt-3">
+        <div class="input-group">
+            <input name="userMessage" class="form-control" placeholder="Nhập câu hỏi..." required />
+            <button type="submit" class="btn btn-success">Gửi</button>
+        </div>
+        <small class="text-muted mt-2 d-block">📌 Lưu ý: chỉ hỏi các câu liên quan đến thú cưng hoặc trang web bán thú cưng.</small>
+    </form>
+</div>
+<a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">
+    ← Quay về trang chủ
+</a>
