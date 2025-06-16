@@ -1,15 +1,18 @@
 ﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.Product>
 @using Microsoft.AspNetCore.Mvc.Rendering
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
 @{
-    ViewData["Title"] = "Trang chủ";
+    ViewData["Title"] = Localizer["PageTitle"];
     string currentSearch = ViewBag.CurrentSearch as string;
 }
 
 <style>
     /* ==============================================
-       🎨 PROFESSIONAL PET STORE DESIGN
-       ============================================== */
-    
+           🎨 PROFESSIONAL PET STORE DESIGN
+           ============================================== */
+
     :root {
         --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
@@ -27,8 +30,8 @@
     }
 
     /* ==============================================
-       🎯 HERO SECTION
-       ============================================== */
+           🎯 HERO SECTION
+           ============================================== */
     .hero-section {
         background: var(--primary-gradient);
         padding: 3rem 0;
@@ -37,16 +40,16 @@
         overflow: hidden;
     }
 
-    .hero-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
-        opacity: 0.3;
-    }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.15"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.15"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.3;
+        }
 
     .promo-slider {
         border-radius: 24px;
@@ -80,8 +83,8 @@
     }
 
     /* ==============================================
-       🔍 SEARCH & FILTER SECTIONS
-       ============================================== */
+           🔍 SEARCH & FILTER SECTIONS
+           ============================================== */
     .search-section {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(20px);
@@ -94,15 +97,15 @@
         overflow: hidden;
     }
 
-    .search-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--primary-gradient);
-    }
+        .search-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
 
     .filter-card {
         background: rgba(255, 255, 255, 0.95);
@@ -116,19 +119,19 @@
         overflow: hidden;
     }
 
-    .filter-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: var(--success-gradient);
-    }
+        .filter-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--success-gradient);
+        }
 
     /* ==============================================
-       🛍️ PRODUCT CARDS
-       ============================================== */
+           🛍️ PRODUCT CARDS
+           ============================================== */
     .product-card {
         border: none;
         border-radius: 20px;
@@ -141,27 +144,27 @@
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .product-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-        opacity: 0;
-        transition: var(--transition);
-        z-index: 1;
-    }
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
 
-    .product-card:hover {
-        transform: translateY(-12px) scale(1.02);
-        box-shadow: var(--card-shadow-hover);
-    }
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--card-shadow-hover);
+        }
 
-    .product-card:hover::before {
-        opacity: 1;
-    }
+            .product-card:hover::before {
+                opacity: 1;
+            }
 
     .product-image {
         position: relative;
@@ -169,10 +172,10 @@
         border-radius: 16px 16px 0 0;
     }
 
-    .product-image img {
-        transition: var(--transition);
-        filter: brightness(0.95) contrast(1.05);
-    }
+        .product-image img {
+            transition: var(--transition);
+            filter: brightness(0.95) contrast(1.05);
+        }
 
     .product-card:hover .product-image img {
         transform: scale(1.15);
@@ -213,24 +216,24 @@
         overflow: hidden;
     }
 
-    .price-tag::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transition: left 0.6s ease;
-    }
+        .price-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
 
     .product-card:hover .price-tag::before {
         left: 100%;
     }
 
     /* ==============================================
-       🎯 BUTTONS & INTERACTIONS
-       ============================================== */
+           🎯 BUTTONS & INTERACTIONS
+           ============================================== */
     .btn-custom-primary {
         background: var(--primary-gradient);
         border: none;
@@ -244,25 +247,25 @@
         overflow: hidden;
     }
 
-    .btn-custom-primary::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transition: left 0.6s ease;
-    }
+        .btn-custom-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
 
-    .btn-custom-primary:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
-    }
+        .btn-custom-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
 
-    .btn-custom-primary:hover::before {
-        left: 100%;
-    }
+            .btn-custom-primary:hover::before {
+                left: 100%;
+            }
 
     .btn-add-cart {
         background: var(--success-gradient);
@@ -276,26 +279,26 @@
         overflow: hidden;
     }
 
-    .btn-add-cart::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-        transition: left 0.6s ease;
-    }
+        .btn-add-cart::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
 
-    .btn-add-cart:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(17, 153, 142, 0.4);
-        color: white;
-    }
+        .btn-add-cart:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(17, 153, 142, 0.4);
+            color: white;
+        }
 
-    .btn-add-cart:hover::before {
-        left: 100%;
-    }
+            .btn-add-cart:hover::before {
+                left: 100%;
+            }
 
     .btn-outline-primary {
         border: 2px solid transparent;
@@ -306,16 +309,16 @@
         transition: var(--transition);
     }
 
-    .btn-outline-primary:hover {
-        background: var(--primary-gradient);
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
-    }
+        .btn-outline-primary:hover {
+            background: var(--primary-gradient);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+        }
 
     /* ==============================================
-       📝 FORM ELEMENTS
-       ============================================== */
+           📝 FORM ELEMENTS
+           ============================================== */
     .form-control,
     .form-select {
         border: 2px solid rgba(102, 126, 234, 0.1);
@@ -327,12 +330,12 @@
         backdrop-filter: blur(10px);
     }
 
-    .form-control:focus,
-    .form-select:focus {
-        border-color: #667eea;
-        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
-        background: white;
-    }
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.15);
+            background: white;
+        }
 
     .input-group-text {
         background: white;
@@ -341,8 +344,8 @@
     }
 
     /* ==============================================
-       🎨 SECTION TITLES & TYPOGRAPHY
-       ============================================== */
+           🎨 SECTION TITLES & TYPOGRAPHY
+           ============================================== */
     .section-title {
         color: #2c3e50;
         font-weight: 800;
@@ -352,16 +355,16 @@
         display: inline-block;
     }
 
-    .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        width: 60px;
-        height: 4px;
-        background: var(--primary-gradient);
-        border-radius: 2px;
-    }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-gradient);
+            border-radius: 2px;
+        }
 
     .section-subtitle {
         color: #6c757d;
@@ -371,53 +374,58 @@
     }
 
     /* ==============================================
-       ✨ ANIMATIONS & EFFECTS
-       ============================================== */
+           ✨ ANIMATIONS & EFFECTS
+           ============================================== */
     .fade-in {
         opacity: 0;
         transform: translateY(40px);
         transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
     .floating-icon {
         animation: float 3s ease-in-out infinite;
     }
 
     @@keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
+        0%, 100% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
     }
 
     /* ==============================================
-       📱 RESPONSIVE DESIGN
-       ============================================== */
+           📱 RESPONSIVE DESIGN
+           ============================================== */
     @@media (max-width: 768px) {
         .hero-section {
             padding: 2rem 0;
         }
-        
+
         .search-section,
         .filter-card {
             padding: 1.5rem;
         }
-        
+
         .section-title {
             font-size: 1.5rem;
         }
-        
+
         .product-card:hover {
             transform: translateY(-6px) scale(1.01);
         }
     }
 
     /* ==============================================
-       🎯 LOADING STATES
-       ============================================== */
+           🎯 LOADING STATES
+           ============================================== */
     .loading-shimmer {
         background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
         background-size: 200% 100%;
@@ -425,13 +433,18 @@
     }
 
     @@keyframes shimmer {
-        0% { background-position: -200% 0; }
-        100% { background-position: 200% 0; }
+        0% {
+            background-position: -200% 0;
+        }
+
+        100% {
+            background-position: 200% 0;
+        }
     }
 
     /* ==============================================
-       🌟 SPECIAL EFFECTS
-       ============================================== */
+           🌟 SPECIAL EFFECTS
+           ============================================== */
     .glass-effect {
         background: rgba(255, 255, 255, 0.25);
         backdrop-filter: blur(10px);
@@ -460,26 +473,26 @@
                 <div class="carousel-item active h-100">
                     <img src="~/images/hinh1.png" class="d-block w-100 h-100" style="object-fit: cover;" alt="Khuyến mãi 1">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="fw-bold mb-3">🐾 Chào mừng đến với Pet Paradise</h2>
-                        <p class="fs-5">Tìm kiếm người bạn hoàn hảo cho gia đình bạn</p>
+                        <h2 class="fw-bold mb-3">@Localizer["CarouselCaption1Title"]</h2>
+                        <p class="fs-5">@Localizer["CarouselCaption1Text"]</p>
                     </div>
                 </div>
                 <div class="carousel-item h-100">
                     <img src="~/images/hinh3.jpeg" class="d-block w-100 h-100" style="object-fit: cover;" alt="Khuyến mãi 2">
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 class="fw-bold mb-3">🎉 Ưu đãi đặc biệt</h2>
-                        <p class="fs-5">Giảm giá lên đến 30% cho tất cả thú cưng</p>
+                        <h2 class="fw-bold mb-3">@Localizer["CarouselCaption2Title"]</h2>
+                        <p class="fs-5">@Localizer["CarouselCaption2Text"]</p>
                     </div>
                 </div>
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#promoSlider" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Trước</span>
+                <span class="visually-hidden">@Localizer["CarouselPrev"]</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#promoSlider" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Sau</span>
+                <span class="visually-hidden">@Localizer["CarouselNext"]</span>
             </button>
         </div>
     </div>
@@ -491,7 +504,7 @@
         <div class="row align-items-center">
             <div class="col-lg-8">
                 <h4 class="mb-4 gradient-text">
-                    <i class="bi bi-search me-2"></i>Tìm kiếm thú cưng yêu thích
+                    <i class="bi bi-search me-2"></i>@Localizer["SearchTitle"]
                 </h4>
                 <form method="get" asp-action="Index">
                     <div class="input-group input-group-lg">
@@ -500,9 +513,9 @@
                         </span>
                         <input type="text" name="searchString" value="@currentSearch"
                                class="form-control border-start-0 ps-2"
-                               placeholder="Nhập tên thú cưng bạn muốn tìm..." />
+                               placeholder="@Localizer["SearchTitle"]..." />
                         <button type="submit" class="btn btn-custom-primary">
-                            <i class="bi bi-search me-2"></i>Tìm kiếm
+                            <i class="bi bi-search me-2"></i>@Localizer["SearchButton"]
                         </button>
                     </div>
                 </form>
@@ -511,30 +524,30 @@
                 <div class="floating-icon">
                     <i class="bi bi-heart-fill text-danger" style="font-size: 4rem;"></i>
                 </div>
-                <p class="text-muted mt-3 fs-6">Tìm kiếm người bạn đồng hành hoàn hảo</p>
+                <p class="text-muted mt-3 fs-6">@Localizer["CompanionMessage"]</p>
             </div>
         </div>
     </div>
 
     <!-- 🎛️ BỘ LỌC -->
     <div class="filter-card fade-in">
-        <h5 class="section-title mb-4">Bộ lọc và sắp xếp</h5>
+        <h5 class="section-title mb-4">@Localizer["FilterAndSort"]</h5>
         <form method="get" asp-action="Index" onchange="this.submit()">
             <div class="row g-4">
                 <div class="col-lg-6">
                     <label class="form-label fw-semibold mb-3">
-                        <i class="bi bi-funnel-fill text-primary me-2"></i>Lọc theo loài thú cưng
+                        <i class="bi bi-funnel-fill text-primary me-2"></i>@Localizer["FilterCategory"]
                     </label>
                     <select name="categoryId" class="form-select form-select-lg" asp-items="ViewBag.CategoryList">
-                        <option value="">🐾 Tất cả thú cưng</option>
+                        <option value="">@Localizer["AllPets"]</option>
                     </select>
                 </div>
                 <div class="col-lg-6">
                     <label class="form-label fw-semibold mb-3">
-                        <i class="bi bi-sort-down-alt text-primary me-2"></i>Sắp xếp theo giá
+                        <i class="bi bi-sort-down-alt text-primary me-2"></i>@Localizer["SortPrice"]
                     </label>
                     <select name="sortOrder" class="form-select form-select-lg" asp-items="ViewBag.SortList">
-                        <option value="">💰 Mặc định</option>
+                        <option value="">@Localizer["DefaultSort"]</option>
                     </select>
                 </div>
             </div>
@@ -543,8 +556,8 @@
 
     <!-- 🏪 DANH SÁCH SẢN PHẨM -->
     <div class="mb-5">
-        <h2 class="section-title">Thú cưng dành cho bạn</h2>
-        <p class="section-subtitle">Khám phá những người bạn đáng yêu đang chờ đón gia đình mới</p>
+        <h2 class="section-title">@Localizer["ProductSectionTitle"]</h2>
+        <p class="section-subtitle">@Localizer["ProductSectionSubtitle"]</p>
     </div>
 
     <div class="row g-4">
@@ -571,14 +584,14 @@
                         <div class="d-flex flex-column gap-3 mt-auto">
                             <a asp-controller="Home" asp-action="Details" asp-route-id="@item.Id"
                                class="btn btn-outline-primary">
-                                <i class="bi bi-eye me-2"></i>Xem chi tiết
+                                <i class="bi bi-eye me-2"></i>@Localizer["ViewDetails"]
                             </a>
 
                             <form asp-controller="ShoppingCart" asp-action="AddToCart" method="post">
                                 <input type="hidden" name="productId" value="@item.Id" />
                                 <input type="hidden" name="quantity" value="1" />
                                 <button type="submit" class="btn btn-add-cart w-100">
-                                    <i class="bi bi-cart-plus me-2"></i>Thêm vào giỏ hàng
+                                    <i class="bi bi-cart-plus me-2"></i>@Localizer["AddToCart"]
                                 </button>
                             </form>
                         </div>
@@ -594,10 +607,10 @@
             <div class="floating-icon">
                 <i class="bi bi-search" style="font-size: 5rem; color: #dee2e6;"></i>
             </div>
-            <h3 class="mt-4 text-muted fw-bold">Không tìm thấy thú cưng nào</h3>
-            <p class="text-muted fs-5 mb-4">Hãy thử tìm kiếm với từ khóa khác hoặc xem tất cả sản phẩm</p>
+            <h3 class="mt-4 text-muted fw-bold">@Localizer["NoResultsTitle"]</h3>
+            <p class="text-muted fs-5 mb-4">@Localizer["NoResultsMessage"]</p>
             <a href="@Url.Action("Index")" class="btn btn-custom-primary btn-lg">
-                <i class="bi bi-house-heart me-2"></i>Xem tất cả thú cưng
+                <i class="bi bi-house-heart me-2"></i>@Localizer["ViewAllPets"]
             </a>
         </div>
     }
@@ -630,7 +643,7 @@
             card.addEventListener('mouseenter', function() {
                 this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
             });
-            
+
             card.addEventListener('mouseleave', function() {
                 this.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
             });

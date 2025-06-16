@@ -3,26 +3,31 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PhanLaiAnhTuan_Lab03.Models;
+using Microsoft.Extensions.Localization;
 
 namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("admin/nguoi-dung")]
     public class UserManagementController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly IStringLocalizer<UserManagementController> _localizer;
 
-        public UserManagementController(UserManager<ApplicationUser> userManager)
+        public UserManagementController(UserManager<ApplicationUser> userManager,
+                                        IStringLocalizer<UserManagementController> localizer)
         {
             _userManager = userManager;
+            _localizer = localizer;
         }
 
-        // Hiển thị danh sách user và vai trò
+        [HttpGet]
+        [Route("")]
         public async Task<IActionResult> Index()
         {
             var users = await _userManager.Users.ToListAsync();
             var userRoles = new Dictionary<string, IList<string>>();
-
             foreach (var user in users)
             {
                 userRoles[user.Id] = await _userManager.GetRolesAsync(user);
@@ -32,15 +37,15 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             return View(users);
         }
 
-        // GET: Form tạo nhân viên
         [HttpGet]
+        [Route("tao-nhan-vien")]
         public IActionResult CreateEmployee()
         {
             return View();
         }
 
-        // POST: Tạo tài khoản nhân viên
         [HttpPost]
+        [Route("tao-nhan-vien")]
         public async Task<IActionResult> CreateEmployee(EmployeeCreateViewModel model)
         {
             if (!ModelState.IsValid)
@@ -55,7 +60,7 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null || !await _userManager.IsInRoleAsync(currentUser, "Admin"))
             {
-                return Unauthorized("Bạn không có quyền tạo tài khoản nhân viên.");
+                return Unauthorized(_localizer["UnauthorizedCreateEmployee"]);
             }
 
             var user = new ApplicationUser
@@ -70,7 +75,7 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(user, "Employee");
-                TempData["Success"] = "Tạo tài khoản nhân viên thành công!";
+                TempData["Success"] = _localizer["CreateEmployeeSuccess"];
                 return RedirectToAction("CreateEmployee");
             }
 
@@ -82,7 +87,8 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             return View(model);
         }
 
-        // Vô hiệu hóa user
+        [HttpPost]
+        [Route("vo-hieu-hoa/{id}")]
         public async Task<IActionResult> Disable(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -91,17 +97,19 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             var roles = await _userManager.GetRolesAsync(user);
             if (roles.Contains("Admin"))
             {
-                TempData["Error"] = "Không thể vô hiệu hóa Admin.";
+                TempData["Error"] = _localizer["CannotDisableAdmin"];
                 return RedirectToAction("Index");
             }
 
             user.LockoutEnabled = true;
             user.LockoutEnd = DateTimeOffset.MaxValue;
             await _userManager.UpdateAsync(user);
-            TempData["Success"] = "Đã vô hiệu hóa người dùng.";
+            TempData["Success"] = _localizer["UserDisabled"];
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        [Route("kich-hoat/{id}")]
         public async Task<IActionResult> Enable(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -109,12 +117,12 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
 
             user.LockoutEnd = null;
             await _userManager.UpdateAsync(user);
-            TempData["Success"] = "Đã kích hoạt lại người dùng.";
+            TempData["Success"] = _localizer["UserEnabled"];
             return RedirectToAction("Index");
         }
 
-        // GET: Hiển thị xác nhận xóa (tuỳ chọn)
         [HttpGet]
+        [Route("xoa/{id}")]
         public async Task<IActionResult> Delete(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -123,10 +131,12 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            return View(user); // Tạo View xác nhận nếu muốn
+            return View(user);
         }
 
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
+        [Route("xoa/{id}")]
+        [ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
@@ -139,17 +149,16 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             var roles = await _userManager.GetRolesAsync(user);
             if (roles.Contains("Admin"))
             {
-                TempData["Error"] = "Không thể xóa người dùng có quyền Admin.";
+                TempData["Error"] = _localizer["CannotDeleteAdmin"];
                 return RedirectToAction("Index");
             }
 
             var result = await _userManager.DeleteAsync(user);
             TempData["Success"] = result.Succeeded
-                ? "Đã xóa người dùng thành công."
-                : "Không thể xóa người dùng.";
+                ? _localizer["DeleteSuccess"]
+                : _localizer["DeleteFail"];
 
             return RedirectToAction("Index");
         }
-
     }
 }

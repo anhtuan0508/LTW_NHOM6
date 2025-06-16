@@ -1,6 +1,8 @@
 ﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.Product>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 @{
-    ViewData["Title"] = "Quản lý thú cưng";
+    ViewData["Title"] = Localizer["PageTitle"];
     string currentSort = ViewBag.SortOrder as string;
     string currentSearch = ViewBag.SearchString as string;
 }
@@ -232,8 +234,6 @@
             margin-bottom: 1rem;
             color: #dee2e6;
         }
-
-    /* Mobile responsive styles handled by Bootstrap classes */
 </style>
 
 <div class="container-fluid">
@@ -241,10 +241,10 @@
     <div class="page-header">
         <div class="container">
             <h1 class="page-title d-none d-md-block">
-                <i class="fas fa-paw"></i> @ViewData["Title"]
+                <i class="fas fa-paw"></i> @Localizer["PageHeader"]
             </h1>
             <h1 class="d-md-none text-center" style="font-size: 2rem; font-weight: 700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
-                <i class="fas fa-paw"></i> @ViewData["Title"]
+                <i class="fas fa-paw"></i> @Localizer["PageHeader"]
             </h1>
         </div>
     </div>
@@ -256,17 +256,17 @@
             <div class="row">
                 <div class="col-md-4 mb-2">
                     <a asp-controller="Product" asp-action="Create" class="btn btn-primary-modern btn-modern w-100">
-                        <i class="fas fa-plus"></i> Thêm thú cưng mới
+                        <i class="fas fa-plus"></i> @Localizer["AddPetButton"]
                     </a>
                 </div>
                 <div class="col-md-4 mb-2">
                     <a asp-area="Admin" asp-controller="UserManagement" asp-action="CreateEmployee" class="btn btn-secondary-modern btn-modern w-100">
-                        <i class="fas fa-user-plus"></i> Tạo tài khoản nhân viên
+                        <i class="fas fa-user-plus"></i> @Localizer["CreateEmployeeButton"]
                     </a>
                 </div>
                 <div class="col-md-4 mb-2">
                     <a asp-controller="Categories" asp-action="Index" class="btn btn-info-modern btn-modern w-100">
-                        <i class="fas fa-folder"></i> Quản lý danh mục
+                        <i class="fas fa-folder"></i> @Localizer["ManageCategoriesButton"]
                     </a>
                 </div>
             </div>
@@ -276,26 +276,26 @@
     <!-- Search Section -->
     <div class="search-section">
         <h5 class="search-title">
-            <i class="fas fa-search"></i> Tìm kiếm và lọc
+            <i class="fas fa-search"></i> @Localizer["SearchTitle"]
         </h5>
         <form asp-action="Index" method="get">
             <div class="row g-3">
                 <div class="col-md-5">
                     <input type="text" name="searchString" value="@currentSearch"
                            class="form-control form-control-modern"
-                           placeholder="🔍 Nhập tên thú cưng để tìm kiếm...">
+                           placeholder="@Localizer["SearchPlaceholder"]">
                 </div>
                 <div class="col-md-4">
                     <select name="sortOrder" class="form-select form-select-modern" onchange="this.form.submit()">
-                        <option value="">📊 Chọn cách sắp xếp</option>
-                        <option value="name_asc" selected="@((currentSort == "name_asc").ToString())">🔤 Tên A-Z</option>
-                        <option value="price_asc" selected="@((currentSort == "price_asc").ToString())">💰 Giá thấp đến cao</option>
-                        <option value="price_desc" selected="@((currentSort == "price_desc").ToString())">💎 Giá cao đến thấp</option>
+                        <option value="">@Localizer["SortOptionDefault"]</option>
+                        <option value="name_asc" selected="@((currentSort == "name_asc").ToString())">@Localizer["SortOptionNameAsc"]</option>
+                        <option value="price_asc" selected="@((currentSort == "price_asc").ToString())">@Localizer["SortOptionPriceAsc"]</option>
+                        <option value="price_desc" selected="@((currentSort == "price_desc").ToString())">@Localizer["SortOptionPriceDesc"]</option>
                     </select>
                 </div>
                 <div class="col-md-3">
                     <button type="submit" class="btn btn-primary-modern btn-modern w-100">
-                        <i class="fas fa-search"></i> Tìm kiếm
+                        <i class="fas fa-search"></i> @Localizer["SearchButton"]
                     </button>
                 </div>
             </div>
@@ -310,11 +310,11 @@
                 <table class="table table-modern">
                     <thead>
                         <tr>
-                            <th><i class="fas fa-image"></i> Hình ảnh</th>
-                            <th><i class="fas fa-tag"></i> Tên thú cưng</th>
-                            <th><i class="fas fa-dollar-sign"></i> Giá bán</th>
-                            <th><i class="fas fa-layer-group"></i> Danh mục</th>
-                            <th><i class="fas fa-cogs"></i> Thao tác</th>
+                            <th><i class="fas fa-image"></i> @Localizer["ImageColumn"]</th>
+                            <th><i class="fas fa-tag"></i> @Localizer["NameColumn"]</th>
+                            <th><i class="fas fa-dollar-sign"></i> @Localizer["PriceColumn"]</th>
+                            <th><i class="fas fa-layer-group"></i> @Localizer["CategoryColumn"]</th>
+                            <th><i class="fas fa-cogs"></i> @Localizer["ActionColumn"]</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -347,30 +347,30 @@
                                     <div class="pet-price">@item.Price.ToString("C")</div>
                                 </td>
                                 <td>
-                                    <span class="pet-category">@(item.Category?.Name ?? "Chưa phân loại")</span>
+                                    <span class="pet-category">@(item.Category?.Name ?? Localizer["NoCategory"].Value)</span>
                                 </td>
                                 <td class="action-buttons-cell">
                                     <div class="d-flex flex-wrap justify-content-center gap-1">
                                         @if (User.Identity.IsAuthenticated)
                                         {
-                                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-view btn-sm" title="Xem chi tiết">
+                                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-view btn-sm" title="@Localizer["ViewButtonTitle"]">
                                                 <i class="fas fa-eye d-none d-sm-inline"></i>
-                                                <span class="d-sm-none">Xem</span>
+                                                <span class="d-sm-none">@Localizer["ViewButton"]</span>
                                             </a>
                                         }
                                         @if (User.IsInRole("Admin") || User.IsInRole("Employee"))
                                         {
-                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-edit btn-sm" title="Chỉnh sửa">
+                                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-edit btn-sm" title="@Localizer["EditButtonTitle"]">
                                                 <i class="fas fa-edit d-none d-sm-inline"></i>
-                                                <span class="d-sm-none">Sửa</span>
+                                                <span class="d-sm-none">@Localizer["EditButton"]</span>
                                             </a>
                                         }
                                         @if (User.IsInRole("Admin"))
                                         {
-                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-delete btn-sm" title="Xóa"
-                                               onclick="return confirm('Bạn có chắc chắn muốn xóa thú cưng này?')">
+                                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-delete btn-sm" title="@Localizer["DeleteButtonTitle"]"
+                                               onclick="return confirm('@Localizer["DeleteConfirmation"]')">
                                                 <i class="fas fa-trash d-none d-sm-inline"></i>
-                                                <span class="d-sm-none">Xóa</span>
+                                                <span class="d-sm-none">@Localizer["DeleteButton"]</span>
                                             </a>
                                         }
                                     </div>
@@ -385,12 +385,12 @@
         {
             <div class="empty-state">
                 <i class="fas fa-search"></i>
-                <h4>Không tìm thấy thú cưng nào</h4>
-                <p class="text-muted">Hãy thử thay đổi từ khóa tìm kiếm hoặc bộ lọc</p>
+                <h4>@Localizer["EmptyStateHeader"]</h4>
+                <p class="text-muted">@Localizer["EmptyStateMessage"]</p>
                 @if (User.IsInRole("Admin"))
                 {
                     <a asp-controller="Product" asp-action="Create" class="btn btn-primary-modern btn-modern mt-3">
-                        <i class="fas fa-plus"></i> Thêm thú cưng đầu tiên
+                        <i class="fas fa-plus"></i> @Localizer["AddFirstPetButton"]
                     </a>
                 }
             </div>
@@ -408,7 +408,7 @@
         if (searchForm) {
             searchForm.addEventListener('submit', function () {
                 const submitBtn = this.querySelector('button[type="submit"]');
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang tìm...';
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> @Localizer["SearchingText"]';
                 submitBtn.disabled = true;
             });
         }

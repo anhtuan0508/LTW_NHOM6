@@ -9,6 +9,7 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
 {
     [Authorize]
     [Authorize(Roles = "Customer")]
+    [Route("gio-hang")] // Đường dẫn thân thiện thay vì "cart"
     public class ShoppingCartController : Controller
     {
         private readonly IProductRepository _productRepository;
@@ -21,10 +22,12 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             _context = context;
             _userManager = userManager;
         }
+
+        [HttpPost]
+        [Route("cap-nhat")] // POST /gio-hang/cap-nhat
         public IActionResult UpdateQuantity(int productId, int quantity)
         {
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart") ?? new ShoppingCart();
-
             var item = cart.Items.FirstOrDefault(i => i.ProductId == productId);
             if (item != null)
             {
@@ -35,7 +38,8 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return RedirectToAction("Index");
         }
 
-
+        [HttpPost]
+        [Route("them")] // POST /gio-hang/them
         public async Task<IActionResult> AddToCart(int productId, int quantity = 1)
         {
             var product = await _productRepository.GetByIdAsync(productId);
@@ -55,12 +59,16 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        [Route("")] // GET /gio-hang
         public IActionResult Index()
         {
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart") ?? new ShoppingCart();
             return View(cart);
         }
 
+        [HttpPost]
+        [Route("xoa")] // POST /gio-hang/xoa
         public IActionResult RemoveFromCart(int productId)
         {
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart") ?? new ShoppingCart();
@@ -69,20 +77,21 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
+        [Route("thanh-toan")] // GET /gio-hang/thanh-toan
         public IActionResult Checkout() => View(new Order());
 
         [HttpPost]
+        [Route("thanh-toan")] // POST /gio-hang/thanh-toan
         public async Task<IActionResult> Checkout(Order order)
         {
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
             if (cart == null || !cart.Items.Any()) return RedirectToAction("Index");
 
             var user = await _userManager.GetUserAsync(User);
-
             order.UserId = user.Id;
             order.FullName = Request.Form["FullName"];
             order.PhoneNumber = Request.Form["PhoneNumber"];
-
             order.OrderDate = DateTime.UtcNow;
             order.TotalPrice = cart.Total;
             order.OrderDetails = cart.Items.Select(i => new OrderDetail
@@ -99,5 +108,4 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View("OrderCompleted", order.Id);
         }
     }
-
 }

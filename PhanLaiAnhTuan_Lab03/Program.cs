@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using PhanLaiAnhTuan_Lab03.Data;
 using PhanLaiAnhTuan_Lab03.Models;
 using PhanLaiAnhTuan_Lab03.Repositories;
-using PhanLaiAnhTuan_Lab03.Data;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using PhanLaiAnhTuan_Lab03.Services;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,8 +46,38 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.SlidingExpiration = true;
 });
 
-// Razor + MVC
-builder.Services.AddRazorPages();
+
+builder.Services.Configure<RequestLocalizationOptions>(options =>
+{
+    var supportedCultures = new[] { new CultureInfo("vi"), new CultureInfo("en") };
+    options.DefaultRequestCulture = new RequestCulture("vi");
+    options.SupportedCultures = supportedCultures;
+    options.SupportedUICultures = supportedCultures;
+
+    // Cài lại toàn bộ thứ tự ưu tiên: Cookie -> QueryString -> Accept-Language
+    options.RequestCultureProviders = new RequestCultureProvider[]
+    {
+        new CookieRequestCultureProvider(),
+        new QueryStringRequestCultureProvider(),
+        new AcceptLanguageHeaderRequestCultureProvider()
+    };
+});
+builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AuthorizeAreaFolder("Identity", "/Account/Manage");
+    options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/Index", "tai-khoan");
+    options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/Email", "tai-khoan/email");
+    options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/ChangePassword", "tai-khoan/mat-khau");
+    options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/TwoFactorAuthentication", "tai-khoan/2fa");
+    options.Conventions.AddAreaPageRoute("Identity", "/Account/Manage/PersonalData", "tai-khoan/thong-tin");
+})
+.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+.AddDataAnnotationsLocalization();
+
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+    .AddDataAnnotationsLocalization();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
@@ -52,7 +86,12 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
-builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews()
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+    .AddDataAnnotationsLocalization();
+
+
 
 var app = builder.Build();
 
@@ -79,6 +118,22 @@ else
 
 app.UseStaticFiles();
 app.UseSession();
+var supportedCultures = new[]
+{
+    new CultureInfo("en"),
+    new CultureInfo("vi")
+};
+
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("vi"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+};
+
+app.UseRequestLocalization(localizationOptions);
+var locOptions = app.Services.GetService<IOptions<RequestLocalizationOptions>>();
+app.UseRequestLocalization(locOptions.Value);
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();

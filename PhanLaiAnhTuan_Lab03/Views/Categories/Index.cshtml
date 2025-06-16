@@ -1,21 +1,21 @@
 ﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.Category>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Danh sách loài";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
-<h2 class="mt-4">Danh sách loài</h2>
+<h2 class="mt-4">@Localizer["IndexHeader"]</h2>
 
-
-<a asp-controller="Product" asp-action="Index" class="btn btn-secondary mb-3">Quay lại danh sách loài</a>
-
-<a asp-action="Create" class="btn btn-primary mb-3">Thêm loài</a>
+<a asp-controller="Product" asp-action="Index" class="btn btn-secondary mb-3">@Localizer["BackToListButton"]</a>
+<a asp-action="Create" class="btn btn-primary mb-3">@Localizer["AddCategoryButton"]</a>
 
 <table class="table table-bordered table-striped">
     <thead class="thead-dark">
         <tr>
-            <th>Tên loài</th>
-            <th>Hành động</th>
+            <th>@Localizer["CategoryNameColumn"]</th>
+            <th>@Localizer["ActionsColumn"]</th>
         </tr>
     </thead>
     <tbody>
@@ -24,8 +24,8 @@
             <tr>
                 <td>@item.Name</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Sửa</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Xóa</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">@Localizer["EditButton"]</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">@Localizer["DeleteButton"]</a>
                 </td>
             </tr>
         }

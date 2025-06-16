@@ -1,7 +1,9 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Category
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Xóa loài";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -16,7 +18,7 @@
     </div>
 }
 
-<h3>Bạn có chắc muốn xóa loài này?</h3>
+<h3>@Localizer["DeleteConfirmationMessage"]</h3>
 
 <div>
     <h4>@Model.Name</h4>
@@ -24,6 +26,6 @@
 
 <form asp-action="DeleteConfirmed" method="post">
     <input type="hidden" asp-for="Id" />
-    <button type="submit" class="btn btn-danger">Xóa</button>
-    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    <button type="submit" class="btn btn-danger">@Localizer["DeleteButton"]</button>
+    <a asp-action="Index" class="btn btn-secondary">@Localizer["CancelButton"]</a>
 </form>

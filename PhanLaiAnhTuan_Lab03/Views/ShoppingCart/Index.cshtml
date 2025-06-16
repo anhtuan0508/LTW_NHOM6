@@ -1,25 +1,27 @@
 ﻿@model ShoppingCart
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Giỏ hàng";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
-<h2 class="mb-4">🛒 Giỏ hàng của bạn</h2>
+<h2 class="mb-4">@Localizer["CartHeader"]</h2>
 
 @if (!Model.Items.Any())
 {
-    <div class="alert alert-info">Giỏ hàng đang trống.</div>
-    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">← Quay lại mua hàng</a>
+    <div class="alert alert-info">@Localizer["EmptyCartMessage"]</div>
+    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">@Localizer["BackToShoppingButton"]</a>
 }
 else
 {
     <table class="table table-bordered">
         <thead class="table-light">
             <tr>
-                <th>Thú cưng</th>
-                <th style="width: 150px;">Số lượng</th>
-                <th>Giá</th>
-                <th>Tổng</th>
+                <th>@Localizer["PetColumn"]</th>
+                <th style="width: 150px;">@Localizer["QuantityColumn"]</th>
+                <th>@Localizer["PriceColumn"]</th>
+                <th>@Localizer["TotalColumn"]</th>
                 <th></th>
             </tr>
         </thead>
@@ -30,11 +32,11 @@ else
                     <td>@item.Name</td>
                     <td>
                         <div class="d-flex align-items-center">
-                            <a asp-action="UpdateQuantity" asp-route-productId="@item.ProductId" asp-route-quantity="@(item.Quantity - 1)" class="btn btn-sm btn-outline-secondary me-1" title="Giảm">
+                            <a asp-action="UpdateQuantity" asp-route-productId="@item.ProductId" asp-route-quantity="@(item.Quantity - 1)" class="btn btn-sm btn-outline-secondary me-1" title="@Localizer["DecreaseTitle"]">
                                 <i class="bi bi-dash"></i>
                             </a>
                             <span>@item.Quantity</span>
-                            <a asp-action="UpdateQuantity" asp-route-productId="@item.ProductId" asp-route-quantity="@(item.Quantity + 1)" class="btn btn-sm btn-outline-secondary ms-1" title="Tăng">
+                            <a asp-action="UpdateQuantity" asp-route-productId="@item.ProductId" asp-route-quantity="@(item.Quantity + 1)" class="btn btn-sm btn-outline-secondary ms-1" title="@Localizer["IncreaseTitle"]">
                                 <i class="bi bi-plus"></i>
                             </a>
                         </div>
@@ -43,7 +45,7 @@ else
                     <td>@((item.Price * item.Quantity).ToString("C"))</td>
                     <td>
                         <a asp-action="RemoveFromCart" asp-route-productId="@item.ProductId" class="btn btn-sm btn-danger">
-                            <i class="bi bi-trash"></i> Xóa
+                            @Html.Raw(Localizer["RemoveButton"].Value)
                         </a>
                     </td>
                 </tr>
@@ -53,13 +55,13 @@ else
 
     <div class="d-flex justify-content-between align-items-center mt-3">
         <a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">
-            ← Tiếp tục mua
+            @Localizer["ContinueShoppingButton"]
         </a>
 
-        <h5 class="text-end">Tổng: <strong>@Model.Total.ToString("C")</strong></h5>
+        <h5 class="text-end">@Localizer["TotalLabel"]: <strong>@Model.Total.ToString("C")</strong></h5>
 
         <a asp-action="Checkout" class="btn btn-success">
-            <i class="bi bi-bag-check"></i> Đặt hàng
+            @Html.Raw(Localizer["CheckoutButton"].Value)
         </a>
     </div>
 }

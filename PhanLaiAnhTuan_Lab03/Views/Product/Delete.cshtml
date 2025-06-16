@@ -1,35 +1,37 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Xóa thú cưng";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>@Localizer["DeleteHeader"]</h1>
 
-<h3>Bạn có chắc muốn xóa thú cưng này?</h3>
+<h3>@Localizer["ConfirmationMessage"]</h3>
 
 <div>
     <h4>@Model.Name</h4>
 
     @if (!string.IsNullOrEmpty(Model.ImageUrl))
     {
-        <img src="~/images/@Model.ImageUrl" alt="@Model.Name" style="max-height: 150px;" />
+        <img src="~/images/@Model.ImageUrl" alt="@Localizer["ImageAlt"]" style="max-height: 150px;" />
     }
 
     <dl class="row mt-3">
-        <dt class="col-sm-2">Giá</dt>
+        <dt class="col-sm-2">@Localizer["PriceLabel"]</dt>
         <dd class="col-sm-10">@Model.Price.ToString("C")</dd>
 
-        <dt class="col-sm-2">Loài</dt>
+        <dt class="col-sm-2">@Localizer["CategoryLabel"]</dt>
         <dd class="col-sm-10">@Model.Category?.Name</dd>
 
-        <dt class="col-sm-2">Mô tả</dt>
+        <dt class="col-sm-2">@Localizer["DescriptionLabel"]</dt>
         <dd class="col-sm-10">@Model.Description</dd>
     </dl>
 </div>
 
 <form asp-action="Delete" method="post">
     <input type="hidden" asp-for="Id" />
-    <button type="submit" class="btn btn-danger">Xóa</button>
-    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    <button type="submit" class="btn btn-danger">@Localizer["DeleteButton"]</button>
+    <a asp-action="Index" class="btn btn-secondary">@Localizer["CancelButton"]</a>
 </form>

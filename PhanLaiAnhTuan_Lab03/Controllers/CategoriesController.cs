@@ -3,9 +3,9 @@ using PhanLaiAnhTuan_Lab03.Models;
 using PhanLaiAnhTuan_Lab03.Repositories;
 using System.Threading.Tasks;
 
-
 namespace PhanLaiAnhTuan_Lab03.Controllers
 {
+    [Route("loai")] // Đường dẫn thân thiện thay vì "categories"
     public class CategoriesController : Controller
     {
         private readonly ICategoryRepository _categoryRepository;
@@ -17,27 +17,28 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             _productRepository = productRepository;
         }
 
-        // GET: /Categories
+        [HttpGet]
+        [Route("")] // GET /loai
         public async Task<IActionResult> Index()
         {
             var categories = await _categoryRepository.GetAllCategoriesAsync();
-
-            // Sắp xếp "Chưa có danh mục" xuống cuối bằng cách dùng OrderBy với điều kiện
             var sortedCategories = categories
-                .OrderBy(c => c.Name == "Chưa có loài" ? 1 : 0)  // Đẩy "Chưa có danh mục" về cuối
-                .ThenBy(c => c.Name)  // Các danh mục khác sắp xếp theo tên
+                .OrderBy(c => c.Name == "Chưa có loài" ? 1 : 0)
+                .ThenBy(c => c.Name)
                 .ToList();
 
             return View(sortedCategories);
         }
 
-        // GET: /Categories/Add
+        [HttpGet]
+        [Route("tao-moi")] // GET /loai/tao-moi
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [Route("tao-moi")] // POST /loai/tao-moi
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Category category)
         {
@@ -48,6 +49,9 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             }
             return View(category);
         }
+
+        [HttpGet]
+        [Route("chinh-sua/{id:int}")] // GET /loai/chinh-sua/5
         public async Task<IActionResult> Edit(int id)
         {
             var category = await _categoryRepository.GetCategoryById(id);
@@ -59,6 +63,7 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         }
 
         [HttpPost]
+        [Route("chinh-sua")] // POST /loai/chinh-sua
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Category category)
         {
@@ -70,8 +75,8 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View(category);
         }
 
-
-        // GET: /Categories/Delete/5
+        [HttpGet]
+        [Route("xoa/{id:int}")] // GET /loai/xoa/5
         public async Task<IActionResult> Delete(int id)
         {
             var category = await _categoryRepository.GetCategoryById(id);
@@ -82,25 +87,21 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View(category);
         }
 
-        [HttpPost, ActionName("DeleteConfirmed")]
+        [HttpPost]
+        [Route("xoa/{id:int}")] // POST /loai/xoa/5
+        [ActionName("DeleteConfirmed")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            // Kiểm tra xem danh mục mặc định "Chưa có danh mục" đã tồn tại chưa
             var defaultCategory = await _categoryRepository.GetCategoryByNameAsync("Chưa có loài");
             if (defaultCategory == null)
             {
-                // Nếu chưa có thì tạo mới
-                var newCategory = new Category
-                {
-                    Name = "Chưa có loài"
-                };
+                var newCategory = new Category { Name = "Chưa có loài" };
                 await _categoryRepository.AddCategoryAsync(newCategory);
                 defaultCategory = newCategory;
             }
             var defaultCategoryId = defaultCategory.Id;
 
-            // Không cho xóa danh mục mặc định
             if (id == defaultCategoryId)
             {
                 ModelState.AddModelError("", "Không thể xóa loài mặc định.");
@@ -108,28 +109,15 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
                 return View("Delete", category);
             }
 
-            // Lấy danh sách sản phẩm thuộc danh mục cần xóa
             var products = await _productRepository.GetProductsByCategoryIdAsync(id);
-
-            // Cập nhật sản phẩm sang danh mục mặc định
             foreach (var product in products)
             {
                 product.CategoryId = defaultCategoryId;
                 await _productRepository.UpdateAsync(product);
             }
 
-            // Xóa danh mục
             await _categoryRepository.DeleteCategoryAsync(id);
-
             return RedirectToAction(nameof(Index));
         }
-
-
-
-
-
-
-
-
     }
 }

@@ -1,21 +1,22 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using PhanLaiAnhTuan_Lab03.Models
-
+@using Microsoft.AspNetCore.Mvc.Localization
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
+@inject IViewLocalizer Localizer
 
 <ul class="navbar-nav">
     @if (SignInManager.IsSignedIn(User))
     {
         <li class="nav-item">
-            <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Quản lý tài khoản">
-                <i class="bi bi-person-circle me-1"></i>Xin chào @UserManager.GetUserName(User)!
+            <a id="manage" class="nav-link text-dark" inadvertent="Identity" asp-page="/Account/Manage/Index" title="@Localizer["ManageAccountTitle"]">
+                @Html.Raw(Localizer["GreetingMessage"].Value.Replace("#UserName", UserManager.GetUserName(User)))
             </a>
         </li>
         <li class="nav-item">
             <form id="logoutForm" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Product", new { area = "" })" method="post">
                 <button id="logout" type="submit" class="nav-link btn btn-outline-danger border-0">
-                    <i class="bi bi-box-arrow-right me-1"></i>Đăng xuất
+                    @Html.Raw(Localizer["LogoutButton"].Value)
                 </button>
             </form>
         </li>
@@ -24,12 +25,12 @@
     {
         <li class="nav-item">
             <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/Register">
-                <i class="bi bi-person-plus me-1"></i>Đăng ký
+                @Html.Raw(Localizer["RegisterLink"].Value)
             </a>
         </li>
         <li class="nav-item">
             <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">
-                <i class="bi bi-box-arrow-in-right me-1"></i>Đăng nhập
+                @Html.Raw(Localizer["LoginLink"].Value)
             </a>
         </li>
     }

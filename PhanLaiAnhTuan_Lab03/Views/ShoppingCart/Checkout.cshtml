@@ -1,25 +1,31 @@
 ﻿@model Order
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
-<h2 class="mb-4">🛒 Xác nhận đặt hàng</h2>
+@{
+    ViewData["Title"] = Localizer["PageTitle"];
+}
+
+<h2 class="mb-4">@Localizer["CheckoutHeader"]</h2>
 
 <form asp-action="Checkout" method="post">
     <div class="row g-3">
         <div class="col-md-6">
-            <label for="FullName" class="form-label">Họ tên</label>
-            <input type="text" name="FullName" class="form-control" placeholder="Nhập họ tên người nhận" required />
+            <label for="FullName" class="form-label">@Localizer["FullNameLabel"]</label>
+            <input type="text" name="FullName" class="form-control" placeholder="@Localizer["FullNamePlaceholder"]" required />
         </div>
         <div class="col-md-6">
-            <label for="PhoneNumber" class="form-label">Số điện thoại</label>
-            <input type="tel" name="PhoneNumber" class="form-control" placeholder="VD: 0987654321" required pattern="^\d{9,11}$" />
+            <label for="PhoneNumber" class="form-label">@Localizer["PhoneNumberLabel"]</label>
+            <input type="tel" name="PhoneNumber" class="form-control" placeholder="@Localizer["PhoneNumberPlaceholder"]" required pattern="^\d{9,11}$" />
         </div>
         <div class="col-12">
-            <label asp-for="ShippingAddress" class="form-label">Địa chỉ giao hàng</label>
-            <input asp-for="ShippingAddress" class="form-control" placeholder="VD: 123 Đường ABC, Quận XYZ, TP.HCM" required />
+            <label asp-for="ShippingAddress" class="form-label">@Localizer["ShippingAddressLabel"]</label>
+            <input asp-for="ShippingAddress" class="form-control" placeholder="@Localizer["ShippingAddressPlaceholder"]" required />
         </div>
     </div>
 
     <div class="mt-4">
-        <button type="submit" class="btn btn-success px-4">🚚 Xác nhận đặt hàng</button>
-        <a asp-controller="ShoppingCart" asp-action="Index" class="btn btn-outline-secondary ms-2">⬅️ Quay lại giỏ hàng</a>
+        <button type="submit" class="btn btn-success px-4">@Localizer["ConfirmOrderButton"]</button>
+        <a asp-controller="ShoppingCart" asp-action="Index" class="btn btn-outline-secondary ms-2">@Localizer["BackToCartButton"]</a>
     </div>
 </form>

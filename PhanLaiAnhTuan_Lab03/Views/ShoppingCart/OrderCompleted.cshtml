@@ -1,5 +1,11 @@
 ﻿@model int
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
-<h2>Đặt hàng thành công!</h2>
-<p>Đơn hàng của bạn với mã số <strong>@Model</strong> đã được ghi nhận.</p>
-<a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">Tiếp tục mua</a>
+@{
+    ViewData["Title"] = Localizer["PageTitle"];
+}
+
+<h2>@Localizer["SuccessHeader"]</h2>
+<p>@Html.Raw(Localizer["SuccessMessage"].Value.Replace("#OrderId", Model.ToString()))</p>
+<a asp-controller="Home" asp-action="Index" class="btn btn-outline-primary">@Localizer["ContinueShoppingButton"]</a>

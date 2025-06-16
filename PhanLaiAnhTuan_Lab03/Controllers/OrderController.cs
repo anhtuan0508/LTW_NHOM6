@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 namespace PhanLaiAnhTuan_Lab03.Controllers
 {
     [Authorize(Roles = "Customer")]
+    [Route("don-hang")] // Đường dẫn thân thiện thay vì "orders"
     public class OrderController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -19,12 +20,11 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        [Route("lich-su")] // Kết quả: /don-hang/lich-su
         public async Task<IActionResult> History()
         {
-            // Lấy Id của người dùng hiện tại
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            // Lấy danh sách đơn hàng của user đó
             var orders = await _context.Orders
                 .Include(o => o.OrderDetails)
                     .ThenInclude(od => od.Product)
@@ -35,6 +35,8 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View(orders);
         }
 
+        [HttpGet]
+        [Route("{id:int}")] // Kết quả: /don-hang/5
         public async Task<IActionResult> Details(int id)
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);

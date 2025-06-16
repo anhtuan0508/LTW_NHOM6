@@ -17,6 +17,14 @@
         },
         "runtime": {
           "PhanLaiAnhTuan_Lab03.dll": {}
+        },
+        "resources": {
+          "en/PhanLaiAnhTuan_Lab03.resources.dll": {
+            "locale": "en"
+          },
+          "vi/PhanLaiAnhTuan_Lab03.resources.dll": {
+            "locale": "vi"
+          }
         }
       },
       "Azure.Core/1.35.0": {

@@ -1,32 +1,34 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Chi tiết thú cưng";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
-<h1>@ViewData["Title"]</h1>
+<h1>@Localizer["DetailsHeader"]</h1>
 
 <div>
     <h3>@Model.Name</h3>
 
     @if (!string.IsNullOrEmpty(Model.ImageUrl))
     {
-        <img src="~/images/@Model.ImageUrl" alt="@Model.Name" style="max-height: 250px;" />
+        <img src="~/images/@Model.ImageUrl" alt="@Localizer["ImageAlt"]" style="max-height: 250px;" />
     }
 
     <dl class="row mt-3">
-        <dt class="col-sm-2">Giá</dt>
+        <dt class="col-sm-2">@Localizer["PriceLabel"]</dt>
         <dd class="col-sm-10">@Model.Price.ToString("C")</dd>
 
-        <dt class="col-sm-2">Loài</dt>
+        <dt class="col-sm-2">@Localizer["CategoryLabel"]</dt>
         <dd class="col-sm-10">@Model.Category?.Name</dd>
 
-        <dt class="col-sm-2">Mô tả</dt>
+        <dt class="col-sm-2">@Localizer["DescriptionLabel"]</dt>
         <dd class="col-sm-10">@Model.Description</dd>
     </dl>
 </div>
 
 <p>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Sửa</a>
-    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">@Localizer["EditButton"]</a>
+    <a asp-action="Index" class="btn btn-secondary">@Localizer["BackButton"]</a>
 </p>

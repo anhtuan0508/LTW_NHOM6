@@ -1,23 +1,25 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Order
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Chi tiết đơn hàng";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
-<h2>Chi tiết đơn hàng #@Model.Id</h2>
+<h2>@Localizer["PageTitle"] #@Model.Id</h2>
 
-<p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
-<p><strong>Địa chỉ:</strong> @Model.ShippingAddress</p>
-<p><strong>Ghi chú:</strong> @Model.Notes</p>
-<p><strong>Trạng thái:</strong> @Model.Status</p>
+<p><strong>@Localizer["OrderDateLabel"]:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
+<p><strong>@Localizer["ShippingAddressLabel"]:</strong> @Model.ShippingAddress</p>
+<p><strong>@Localizer["NotesLabel"]:</strong> @Model.Notes</p>
+<p><strong>@Localizer["StatusLabel"]:</strong> @Model.Status</p>
 
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Sản phẩm</th>
-            <th>Số lượng</th>
-            <th>Giá</th>
-            <th>Tổng</th>
+            <th>@Localizer["ProductColumn"]</th>
+            <th>@Localizer["QuantityColumn"]</th>
+            <th>@Localizer["PriceColumn"]</th>
+            <th>@Localizer["TotalColumn"]</th>
         </tr>
     </thead>
     <tbody>
@@ -27,10 +29,10 @@
                 <td>@item.Product.Name</td>
                 <td>@item.Quantity</td>
                 <td>@item.Price.ToString("C")</td>
-                <td>@(item.Price * item.Quantity).ToString("C")</td>
+                <td>@(item.Price* item.Quantity).ToString("C")</td>
             </tr>
         }
     </tbody>
 </table>
 
-<a asp-action="History" class="btn btn-secondary">Quay lại</a>
+<a asp-action="History" class="btn btn-secondary"> @Localizer["BackButton"]</a>

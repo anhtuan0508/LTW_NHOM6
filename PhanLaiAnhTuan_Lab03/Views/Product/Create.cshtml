@@ -1,15 +1,17 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Thêm thú cưng mới";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
-<h1 class="mb-4 text-primary">@ViewData["Title"]</h1>
+<h1 class="mb-4 text-primary">@Localizer["CreateHeader"]</h1>
 
 <form asp-action="Create" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
     <div class="row g-3">
         <div class="col-md-6">
-            <label asp-for="Name" class="form-label fw-semibold">Tên thú cưng</label>
+            <label asp-for="Name" class="form-label fw-semibold">@Localizer["ProductNameLabel"]</label>
             <input asp-for="Name" class="form-control" required />
             <div class="invalid-feedback">
                 @Html.ValidationMessageFor(m => m.Name)
@@ -17,7 +19,7 @@
         </div>
 
         <div class="col-md-6">
-            <label asp-for="Price" class="form-label fw-semibold">Giá thú cưng</label>
+            <label asp-for="Price" class="form-label fw-semibold">@Localizer["ProductPriceLabel"]</label>
             <input asp-for="Price" class="form-control" type="number" min="0" step="0.01" required />
             <div class="invalid-feedback">
                 @Html.ValidationMessageFor(m => m.Price)
@@ -25,7 +27,7 @@
         </div>
 
         <div class="col-12">
-            <label asp-for="Description" class="form-label fw-semibold">Mô tả thú cưng</label>
+            <label asp-for="Description" class="form-label fw-semibold">@Localizer["ProductDescriptionLabel"]</label>
             <textarea asp-for="Description" class="form-control" rows="3"></textarea>
             <div class="invalid-feedback">
                 @Html.ValidationMessageFor(m => m.Description)
@@ -33,9 +35,9 @@
         </div>
 
         <div class="col-md-6">
-            <label asp-for="CategoryId" class="form-label fw-semibold">Loài</label>
+            <label asp-for="CategoryId" class="form-label fw-semibold">@Localizer["CategoryLabel"]</label>
             <select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))" required>
-                <option value="">-- Chọn loài --</option>
+                <option value="">@Localizer["SelectCategoryOption"]</option>
             </select>
             <div class="invalid-feedback">
                 @Html.ValidationMessageFor(m => m.CategoryId)
@@ -43,19 +45,19 @@
         </div>
 
         <div class="col-md-6">
-            <label for="imageFile" class="form-label fw-semibold">Ảnh thú cưng</label>
+            <label for="imageFile" class="form-label fw-semibold">@Localizer["ImageLabel"]</label>
             <input type="file" name="imageFile" id="imageFile" class="form-control" accept="image/*" />
         </div>
 
         <div class="col-12">
-            <label class="form-label fw-semibold">Ảnh xem trước</label><br />
+            <label class="form-label fw-semibold">@Localizer["PreviewImageLabel"]</label><br />
             <img id="imagePreview" src="#" alt="Ảnh xem trước" class="img-thumbnail" style="max-height: 180px; display:none;" />
         </div>
     </div>
 
     <div class="mt-4">
-        <button type="submit" class="btn btn-primary me-2">Thêm mới</button>
-        <a asp-action="Index" class="btn btn-outline-secondary">Hủy</a>
+        <button type="submit" class="btn btn-primary me-2">@Localizer["CreateButton"]</button>
+        <a asp-action="Index" class="btn btn-outline-secondary">@Localizer["CancelButton"]</a>
     </div>
 </form>
 

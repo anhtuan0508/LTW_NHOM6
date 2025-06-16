@@ -1,11 +1,14 @@
 ﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.ApplicationUser>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
 @{
-    ViewData["Title"] = "Quản lý người dùng";
+    ViewData["Title"] = Localizer["UserManagement"];
     Layout = "~/Views/Shared/_Layout.cshtml";
     var roles = ViewBag.UserRoles as Dictionary<string, IList<string>>;
 }
 
-<h2>Quản lý người dùng</h2>
+<h2>@Localizer["UserManagement"]</h2>
 
 @if (TempData["Success"] != null)
 {
@@ -19,17 +22,17 @@
 <table class="table table-bordered table-striped">
     <thead>
         <tr>
-            <th>Email</th>
-            <th>Họ tên</th>
-            <th>Role</th>
-            <th>Trạng thái</th>
-            <th>Hành động</th>
+            <th>@Localizer["Email"]</th>
+            <th>@Localizer["FullName"]</th>
+            <th>@Localizer["Role"]</th>
+            <th>@Localizer["Status"]</th>
+            <th>@Localizer["Actions"]</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var user in Model)
         {
-            var userRoles = roles[user.Id];
+            var userRoles = roles != null && roles.ContainsKey(user.Id) ? roles[user.Id] : new List<string>();
             bool isAdmin = userRoles.Contains("Admin");
 
             <tr>
@@ -37,22 +40,31 @@
                 <td>@user.FullName</td>
                 <td>@string.Join(", ", userRoles)</td>
                 <td>
-                    @(user.LockoutEnd != null && user.LockoutEnd > DateTime.UtcNow ? "Đã bị khóa" : "Hoạt động")
-                </td>
-                <td>
-                    @if (!isAdmin)
+                    @(user.LockoutEnd != null && user.LockoutEnd > DateTime.UtcNow
+                                    ? Localizer["Locked"]
+                                    : Localizer["Active"])
+            </td>
+            <td>
+                @if (!isAdmin)
                     {
-                        @if (user.LockoutEnd != null && user.LockoutEnd > DateTime.UtcNow)
+                        if (user.LockoutEnd != null && user.LockoutEnd > DateTime.UtcNow)
                         {
-                            <a asp-action="Enable" asp-route-id="@user.Id" class="btn btn-success btn-sm">Mở khóa</a>
+                            <a asp-action="Enable" asp-route-id="@user.Id" class="btn btn-success btn-sm">
+                                @Localizer["Enable"]
+                            </a>
                         }
                         else
                         {
-                            <a asp-action="Disable" asp-route-id="@user.Id" class="btn btn-warning btn-sm">Vô hiệu hóa</a>
+                            <a asp-action="Disable" asp-route-id="@user.Id" class="btn btn-warning btn-sm">
+                                @Localizer["Disable"]
+                            </a>
                         }
 
-                        <form asp-action="Delete" asp-route-id="@user.Id" method="post" class="d-inline" onsubmit="return confirm('Xác nhận xóa người dùng này?');">
-                            <button type="submit" class="btn btn-danger btn-sm">Xóa</button>
+                        <form asp-action="Delete" asp-route-id="@user.Id" method="post" class="d-inline"
+                              onsubmit="return confirm('@Localizer["DeleteConfirmation"]');">
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                @Localizer["Delete"]
+                            </button>
                         </form>
                     }
                     else

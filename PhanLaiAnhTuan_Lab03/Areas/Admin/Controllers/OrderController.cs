@@ -7,6 +7,7 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
 {
     [Area("Admin")]
     [Authorize(Roles = "Admin")]
+    [Route("admin/don-hang")] // Đổi từ "orders" sang "don-hang" cho thân thiện
     public class OrderController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -16,26 +17,28 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             _context = context;
         }
 
-        // Hiển thị danh sách đơn hàng
+        [HttpGet]
+        [Route("")] // GET /admin/don-hang
         public async Task<IActionResult> Index()
         {
             var orders = await _context.Orders
                 .Include(o => o.ApplicationUser)
                 .Include(o => o.OrderDetails)
-                .ThenInclude(d => d.Product)
+                    .ThenInclude(d => d.Product)
                 .OrderByDescending(o => o.OrderDate)
                 .ToListAsync();
 
             return View(orders);
         }
 
-        // Chi tiết đơn hàng
+        [HttpGet]
+        [Route("{id:int}")] // GET /admin/don-hang/5
         public async Task<IActionResult> Details(int id)
         {
             var order = await _context.Orders
                 .Include(o => o.ApplicationUser)
                 .Include(o => o.OrderDetails)
-                .ThenInclude(d => d.Product)
+                    .ThenInclude(d => d.Product)
                 .FirstOrDefaultAsync(o => o.Id == id);
 
             if (order == null) return NotFound();
@@ -43,7 +46,8 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             return View(order);
         }
 
-        // Xác nhận đơn
+        [HttpPost]
+        [Route("xac-nhan/{id:int}")] // POST /admin/don-hang/xac-nhan/5
         public async Task<IActionResult> Confirm(int id)
         {
             var order = await _context.Orders.FindAsync(id);
@@ -54,7 +58,8 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // Hủy đơn
+        [HttpPost]
+        [Route("huy/{id:int}")] // POST /admin/don-hang/huy/5
         public async Task<IActionResult> Cancel(int id)
         {
             var order = await _context.Orders.FindAsync(id);

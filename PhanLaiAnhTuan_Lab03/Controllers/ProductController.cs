@@ -9,38 +9,44 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using PhanLaiAnhTuan_Lab03.Filters;
 
-
 namespace PhanLaiAnhTuan_Lab03.Controllers
 {
     [Authorize(Roles = "Admin")]
     [Admin2FARequired]
+    [Route("thu-cung")]
     public class ProductController : Controller
     {
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly ApplicationDbContext _context;   // khai báo DbContext
-        private readonly IWebHostEnvironment _environment; // khai báo để lưu file ảnh
+        private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _environment;
 
         public ProductController(IProductRepository productRepository,
                                  ICategoryRepository categoryRepository,
-                                 IWebHostEnvironment webHostEnvironment, ApplicationDbContext context, IWebHostEnvironment environment)
+                                 IWebHostEnvironment webHostEnvironment,
+                                 ApplicationDbContext context,
+                                 IWebHostEnvironment environment)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
             _webHostEnvironment = webHostEnvironment;
-            _context = context;               // khởi tạo DbContext qua DI
-            _environment = environment;       // khởi tạo IWebHostEnvironment qua DI
+            _context = context;
+            _environment = environment;
         }
 
         [AllowAnonymous]
+        [HttpGet("chi-tiet/{id}")]
         public async Task<IActionResult> Details(int id)
         {
-            var product = await _productRepository.GetByIdAsync(id);
+            var product = await _context.Products
+                                        .Include(p => p.Category)
+                                        .FirstOrDefaultAsync(p => p.Id == id);
             if (product == null) return NotFound();
 
-            return View(product); // Tạo view Details.cshtml trong thư mục Views/Product
+            return View(product);
         }
+
         private string RemoveDiacritics(string input)
         {
             if (string.IsNullOrEmpty(input)) return string.Empty;
@@ -50,17 +56,14 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return new string(chars).Normalize(System.Text.NormalizationForm.FormC).ToLower();
         }
 
-        // GET: Product
+        [HttpGet("danh-sach")]
         public async Task<IActionResult> Index(string searchString, string sortOrder)
         {
             var products = await _productRepository.GetAllAsync();
             if (!string.IsNullOrEmpty(searchString))
             {
                 var normalizedSearch = RemoveDiacritics(searchString);
-
-                products = products
-                    .Where(p => !string.IsNullOrEmpty(p.Name) && RemoveDiacritics(p.Name).Contains(normalizedSearch))
-                    .ToList();
+                products = products.Where(p => !string.IsNullOrEmpty(p.Name) && RemoveDiacritics(p.Name).Contains(normalizedSearch)).ToList();
             }
 
             ViewBag.SearchString = searchString;
@@ -78,7 +81,7 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpGet]
+        [HttpGet("them-moi")]
         public async Task<IActionResult> Create()
         {
             await LoadCategoriesToViewBag();
@@ -86,7 +89,7 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost]
+        [HttpPost("them-moi")]
         public async Task<IActionResult> Create(Product product, IFormFile? imageFile)
         {
             if (!ModelState.IsValid)
@@ -109,12 +112,13 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
                     await imageFile.CopyToAsync(fileStream);
                 }
 
-                product.ImageUrl = uniqueFileName;  // chỉ lưu tên file thôi
+                product.ImageUrl = uniqueFileName;
             }
 
             await _productRepository.AddAsync(product);
             return RedirectToAction(nameof(Index));
         }
+
         private async Task LoadCategoriesToViewBag()
         {
             var categories = await _categoryRepository.GetAllCategoriesAsync();
@@ -140,7 +144,7 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         }
 
         [Authorize(Roles = "Admin,Employee")]
-        [HttpGet]
+        [HttpGet("chinh-sua/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -149,13 +153,11 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             if (product == null) return NotFound();
 
             ViewBag.Categories = await _context.Categories.ToListAsync();
-
             return View(product);
         }
 
-
         [Authorize(Roles = "Admin,Employee")]
-        [HttpPost]
+        [HttpPost("chinh-sua/{id}")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Product product, IFormFile? imageFile)
         {
@@ -170,7 +172,6 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             var existingProduct = await _productRepository.GetByIdAsync(id);
             if (existingProduct == null) return NotFound();
 
-            // Cập nhật các trường dữ liệu
             existingProduct.Name = product.Name;
             existingProduct.Price = product.Price;
             existingProduct.Description = product.Description;
@@ -178,7 +179,6 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
 
             if (imageFile != null && imageFile.Length > 0)
             {
-                // Xóa ảnh cũ nếu có
                 if (!string.IsNullOrEmpty(existingProduct.ImageUrl))
                 {
                     var oldPath = Path.Combine(_webHostEnvironment.WebRootPath, "images", existingProduct.ImageUrl);
@@ -186,7 +186,6 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
                         System.IO.File.Delete(oldPath);
                 }
 
-                // Lưu ảnh mới
                 var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
                 if (!Directory.Exists(uploadsFolder))
                     Directory.CreateDirectory(uploadsFolder);
@@ -203,28 +202,26 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             }
 
             await _productRepository.UpdateAsync(existingProduct);
-
             return RedirectToAction(nameof(Index));
         }
 
         [Authorize(Roles = "Admin")]
+        [HttpGet("xoa/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null) return NotFound();
-
             return View(product);
         }
 
         [Authorize(Roles = "Admin")]
-        [HttpPost, ActionName("Delete")]
+        [HttpPost("xoa/{id}"), ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null) return NotFound();
 
-            // Xóa ảnh nếu có
             if (!string.IsNullOrEmpty(product.ImageUrl))
             {
                 var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", product.ImageUrl);

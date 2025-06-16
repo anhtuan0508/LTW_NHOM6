@@ -1,27 +1,30 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Order
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
+
 @{
-    ViewData["Title"] = "Chi tiết đơn hàng";
+    ViewData["Title"] = Localizer["PageTitle"];
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="mb-4">Chi tiết đơn hàng #@Model.Id</h2>
+<h2 class="mb-4">@Localizer["OrderDetailsHeader"].Value.Replace("#OrderId", Model.Id.ToString())</h2>
 
 <div class="mb-3">
-    <p><strong>Khách hàng:</strong> @Model.FullName (@Model.ApplicationUser?.Email)</p>
-    <p><strong>Số điện thoại:</strong> @Model.PhoneNumber</p>
-    <p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
-    <p><strong>Địa chỉ:</strong> @Model.ShippingAddress</p>
-    <p><strong>Trạng thái:</strong> @Model.Status</p>
+    <p><strong>@Localizer["CustomerLabel"]</strong> @Model.FullName (@Model.ApplicationUser?.Email)</p>
+    <p><strong>@Localizer["PhoneNumberLabel"]</strong> @Model.PhoneNumber</p>
+    <p><strong>@Localizer["OrderDateLabel"]</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
+    <p><strong>@Localizer["ShippingAddressLabel"]</strong> @Model.ShippingAddress</p>
+    <p><strong>@Localizer["StatusLabel"]</strong> @Model.Status</p>
 </div>
 
 <table class="table table-bordered align-middle">
     <thead class="table-light">
         <tr>
-            <th style="width: 100px;">Ảnh</th>
-            <th>Tên thú cưng</th>
-            <th>Số lượng</th>
-            <th>Giá</th>
-            <th>Tổng</th>
+            <th style="width: 100px;">@Localizer["ImageColumn"]</th>
+            <th>@Localizer["PetNameColumn"]</th>
+            <th>@Localizer["QuantityColumn"]</th>
+            <th>@Localizer["PriceColumn"]</th>
+            <th>@Localizer["TotalColumn"]</th>
         </tr>
     </thead>
     <tbody>
@@ -29,7 +32,7 @@
         {
             <tr>
                 <td>
-                    <img src="~/images/@item.Product.ImageUrl" alt="@item.Product.Name" style="width: 80px; height: 80px; object-fit: cover;" class="rounded shadow-sm" />
+                    <img src="~/images/@item.Product.ImageUrl" alt="@Localizer["ImageAlt"].Value.Replace("@ProductName", item.Product.Name)" style="width: 80px; height: 80px; object-fit: cover;" class="rounded shadow-sm" />
                 </td>
                 <td>@item.Product.Name</td>
                 <td>@item.Quantity</td>
@@ -40,4 +43,4 @@
     </tbody>
 </table>
 
-<a asp-action="Index" class="btn btn-outline-secondary">← Quay lại</a>
+<a asp-action="Index" class="btn btn-outline-secondary">@Localizer["BackButton"]</a>

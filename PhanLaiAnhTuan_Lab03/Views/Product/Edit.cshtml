@@ -1,10 +1,12 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer
 
 @{
-    ViewData["Title"] = "Chỉnh sửa thú cưng";
+    ViewData["Title"] = Localizer["PageTitle"];
 }
 
-<h2>@ViewData["Title"]</h2>
+<h2>@Localizer["EditHeader"]</h2>
 
 @if (!ViewData.ModelState.IsValid)
 {
@@ -23,50 +25,50 @@
     <input type="hidden" asp-for="ImageUrl" />
 
     <div class="mb-3">
-        <label asp-for="Name" class="form-label">Tên thú cưng</label>
+        <label asp-for="Name" class="form-label">@Localizer["NameLabel"]</label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="Price" class="form-label">Giá</label>
+        <label asp-for="Price" class="form-label">@Localizer["PriceLabel"]</label>
         <input asp-for="Price" class="form-control" />
         <span asp-validation-for="Price" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="CategoryId" class="form-label">Loài</label>
+        <label asp-for="CategoryId" class="form-label">@Localizer["CategoryLabel"]</label>
         <select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))">
-            <option value="">-- Chọn loài --</option>
+            <option value="">@Localizer["SelectCategoryOption"]</option>
         </select>
         <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="Description" class="form-label">Mô tả</label>
+        <label asp-for="Description" class="form-label">@Localizer["DescriptionLabel"]</label>
         <textarea asp-for="Description" class="form-control" rows="4"></textarea>
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Ảnh hiện tại</label><br />
+        <label class="form-label">@Localizer["CurrentImageLabel"]</label><br />
         @if (!string.IsNullOrEmpty(Model.ImageUrl))
         {
             <img id="previewImage" src="~/images/@Model.ImageUrl" class="img-thumbnail" style="max-height: 200px;" />
         }
         else
         {
-            <img id="previewImage" src="https://via.placeholder.com/200x150?text=No+Image" class="img-thumbnail" />
+            <img id="previewImage" src="https://via.placeholder.com/200x150?text=@Localizer["NoImagePlaceholder"]" class="img-thumbnail" />
         }
     </div>
 
     <div class="mb-3">
-        <label class="form-label">Chọn ảnh mới (không bắt buộc)</label>
+        <label class="form-label">@Localizer["NewImageLabel"]</label>
         <input type="file" name="imageFile" class="form-control" id="imageInput" accept="image/*" />
     </div>
 
     <div class="mt-4">
-        <button type="submit" class="btn btn-primary">Lưu</button>
-        <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+        <button type="submit" class="btn btn-primary">@Localizer["SaveButton"]</button>
+        <a asp-action="Index" class="btn btn-secondary">@Localizer["CancelButton"]</a>
     </div>
 </form>
 
