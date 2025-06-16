@@ -24,6 +24,7 @@
             <th>Role</th>
             <th>Trạng thái</th>
             <th>Hành động</th>
+            <th>Cập nhật quyền</th> @* ✅ Cột mới *@
         </tr>
     </thead>
     <tbody>
@@ -58,6 +59,23 @@
                     else
                     {
                         <span class="text-muted">[Admin]</span>
+                    }
+                </td>
+                <td>
+                    @if (!isAdmin)
+                    {
+                        <form asp-action="UpdateRole" asp-controller="UserManagement" asp-area="Admin" method="post" class="d-flex">
+                            <input type="hidden" name="userId" value="@user.Id" />
+                            <select name="newRole" class="form-select form-select-sm me-2">
+                                <option value="Customer" selected="@userRoles.Contains("Customer")">Người dùng</option>
+                                <option value="Employee" selected="@userRoles.Contains("Employee")">Nhân viên</option>
+                            </select>
+                            <button type="submit" class="btn btn-primary btn-sm">Cập nhật</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="text-muted">--</span>
                     }
                 </td>
             </tr>

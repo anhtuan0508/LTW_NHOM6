@@ -83,6 +83,28 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.Use(async (context, next) =>
+{
+    if (context.User.Identity.IsAuthenticated)
+    {
+        var userManager = context.RequestServices.GetRequiredService<UserManager<ApplicationUser>>();
+        var signInManager = context.RequestServices.GetRequiredService<SignInManager<ApplicationUser>>();
+
+        var user = await userManager.GetUserAsync(context.User);
+
+        if (user != null && user.LockoutEnd.HasValue && user.LockoutEnd > DateTimeOffset.UtcNow)
+        {
+            // Người dùng bị khóa => đăng xuất và chuyển hướng đến trang thông báo
+            await signInManager.SignOutAsync();
+            context.Response.Redirect("/Account/LockedOut");
+            return;
+        }
+    }
+
+    await next();
+});
+
+
 // Routing for Areas
 app.MapControllerRoute(
     name: "areas",
@@ -131,3 +153,4 @@ async Task SeedAdminUserAsync(UserManager<ApplicationUser> userManager)
         // Có thể thêm log nếu result không succeeded
     }
 }
+

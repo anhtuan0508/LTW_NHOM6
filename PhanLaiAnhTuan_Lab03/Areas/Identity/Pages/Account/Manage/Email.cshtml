@@ -1,0 +1,37 @@
+﻿@page
+@model PhanLaiAnhTuan_Lab03.Areas.Identity.Pages.Account.Manage.EmailModel
+@{
+    ViewData["Title"] = "Đổi Email";
+}
+
+<h2 class="mb-4">@ViewData["Title"]</h2>
+
+@if (TempData["StatusMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["StatusMessage"]</div>
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label class="form-label">Email hiện tại</label>
+                <input class="form-control" value="@Model.Email" disabled />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.NewEmail" class="form-label"></label>
+                <input asp-for="Input.NewEmail" class="form-control" />
+                <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Gửi xác nhận đổi Email</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

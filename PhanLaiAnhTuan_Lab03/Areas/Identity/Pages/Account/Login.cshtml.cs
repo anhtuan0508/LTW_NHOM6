@@ -82,18 +82,18 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Identity.Pages.Account
                     var user = await _userManager.FindByEmailAsync(Input.Email);
                     var roles = await _userManager.GetRolesAsync(user);
 
-                    if (roles.Contains("Admin") && !user.Is2FAEnabled)
-                    {
-                        // Gửi OTP cho Admin nếu chưa xác thực
-                        var otp = new Random().Next(100000, 999999).ToString();
+                    //if (roles.Contains("Admin") && !user.Is2FAEnabled)
+                    //{
+                    //    // Gửi OTP cho Admin nếu chưa xác thực
+                    //    var otp = new Random().Next(100000, 999999).ToString();
 
-                        HttpContext.Session.SetString("AdminOTP", otp);
-                        HttpContext.Session.SetString("AdminEmail", Input.Email);
+                    //    HttpContext.Session.SetString("AdminOTP", otp);
+                    //    HttpContext.Session.SetString("AdminEmail", Input.Email);
 
-                        await _emailSender.SendEmailAsync(Input.Email, "Xác minh OTP", $"Mã OTP của bạn là: <strong>{otp}</strong>");
+                    //    await _emailSender.SendEmailAsync(Input.Email, "Xác minh OTP", $"Mã OTP của bạn là: <strong>{otp}</strong>");
 
-                        return RedirectToPage("./VerifyAdminOtp", new { returnUrl = "/Product/Index" });
-                    }
+                    //    return RedirectToPage("./VerifyAdminOtp", new { returnUrl = "/Product/Index" });
+                    //}
 
                     if (roles.Contains("Admin"))
                     {

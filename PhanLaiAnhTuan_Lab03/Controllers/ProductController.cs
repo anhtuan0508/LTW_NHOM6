@@ -12,8 +12,8 @@ using PhanLaiAnhTuan_Lab03.Filters;
 
 namespace PhanLaiAnhTuan_Lab03.Controllers
 {
-    [Authorize(Roles = "Admin")]
-    [Admin2FARequired]
+    //[Authorize(Roles = "Admin")]
+    //[Admin2FARequired]
     public class ProductController : Controller
     {
         private readonly IProductRepository _productRepository;

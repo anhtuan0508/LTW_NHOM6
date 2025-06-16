@@ -151,5 +151,31 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> UpdateRole(string userId, string newRole)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null)
+            {
+                TempData["Error"] = "Người dùng không tồn tại.";
+                return RedirectToAction("Index");
+            }
+
+            var currentRoles = await _userManager.GetRolesAsync(user);
+            if (currentRoles.Contains("Admin"))
+            {
+                TempData["Error"] = "Không thể thay đổi quyền Admin.";
+                return RedirectToAction("Index");
+            }
+
+            // Xoá các vai trò hiện tại (trừ Admin)
+            await _userManager.RemoveFromRolesAsync(user, currentRoles);
+            await _userManager.AddToRoleAsync(user, newRole);
+
+            TempData["Success"] = $"Đã cập nhật vai trò thành '{newRole}' cho {user.Email}.";
+            return RedirectToAction("Index");
+        }
+
+
     }
 }

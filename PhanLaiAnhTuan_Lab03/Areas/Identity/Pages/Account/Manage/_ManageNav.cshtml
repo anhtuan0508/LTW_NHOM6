@@ -1,0 +1,18 @@
+﻿@{
+    var currentPath = Context.Request.Path.Value?.ToLower();
+}
+
+<ul class="nav flex-column nav-pills me-3">
+    <li class="nav-item">
+        <a class="nav-link @(currentPath.Contains("/manage/index") ? "active" : "")"
+           asp-page="./Index">Hồ sơ cá nhân</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(currentPath.Contains("/manage/email") ? "active" : "")"
+           asp-page="./Email">Đổi Email</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link @(currentPath.Contains("/manage/changepassword") ? "active" : "")"
+           asp-page="./ChangePassword">Đổi mật khẩu</a>
+    </li>
+</ul>
