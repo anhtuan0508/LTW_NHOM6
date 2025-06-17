@@ -13,10 +13,11 @@ builder.Services.AddScoped<IProductRepository, EFProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddTransient<IEmailSender, EmailSender>();
-builder.Services.AddHttpContextAccessor(); 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddHttpClient(); // Thêm dòng này để gọi API
 
 
-
+builder.Services.AddSession();
 
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -55,7 +56,7 @@ builder.Services.AddSession(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
-
+app.UseSession();
 // Seed roles and admin user
 using (var scope = app.Services.CreateScope())
 {

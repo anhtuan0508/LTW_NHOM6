@@ -20,3 +20,51 @@ html {
 body {
   margin-bottom: 60px;
 }
+<style >
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #28a745;
+    color: white;
+    font-size: 24px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    max-height: 500px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.chat-bubble {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+    .chat-bubble.user {
+        background-color: #d1ecf1;
+        text-align: right;
+    }
+
+    .chat-bubble.ai {
+        background-color: #f8d7da;
+        text-align: left;
+    }
+
+</style >

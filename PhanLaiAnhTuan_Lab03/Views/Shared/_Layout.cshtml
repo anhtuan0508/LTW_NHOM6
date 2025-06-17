@@ -477,21 +477,31 @@
                     <div class="nav-actions ms-auto">
                         @if (User.IsInRole("Customer"))
                         {
+
                             <!-- Shopping Cart -->
-                            <a asp-controller="ShoppingCart" asp-action="Index" class="cart-button text-decoration-none">
-                                <i class="bi bi-bag-fill cart-icon"></i>
-                                @{
-                                    var cartCount = ViewBag.CartItemCount ?? 0;
-                                }
-                                @if (cartCount > 0)
-                                {
-                                    <span class="cart-badge">@cartCount</span>
-                                }
-                                else
-                                {
-                                    <span class="cart-badge empty">0</span>
-                                }
-                            </a>
+                            <!-- Shopping Cart + Chat Button -->
+                            <div style="display: flex; align-items: center; gap: 10px;">
+                                <!-- Giỏ hàng -->
+                                <a asp-controller="ShoppingCart" asp-action="Index" class="cart-button text-decoration-none">
+                                    <i class="bi bi-bag-fill cart-icon"></i>
+                                    @{
+                                        var cartCount = ViewBag.CartItemCount ?? 0;
+                                    }
+                                    @if (cartCount > 0)
+                                    {
+                                        <span class="cart-badge">@cartCount</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="cart-badge empty">0</span>
+                                    }
+                                </a>
+
+                                <!-- Nút Chat -->
+                                <a href="/home/chat" class="chat-inline-btn" title="Trò chuyện với AI">💬</a>
+                            </div>
+
+
 
                             <a class="nav-btn" asp-controller="Order" asp-action="History">
                                 <i class="bi bi-clock-history"></i>
