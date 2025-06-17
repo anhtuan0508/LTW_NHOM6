@@ -12,8 +12,8 @@ using PhanLaiAnhTuan_Lab03.Models;
 namespace PhanLaiAnhTuan_Lab03.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250612065317_AddIs2FAEnabledToUser")]
-    partial class AddIs2FAEnabledToUser
+    [Migration("20250616113050_addUpdateForeignKeyBehavior")]
+    partial class addUpdateForeignKeyBehavior
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -451,7 +451,7 @@ namespace PhanLaiAnhTuan_Lab03.Migrations
                     b.HasOne("PhanLaiAnhTuan_Lab03.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PhanLaiAnhTuan_Lab03.Models.Category", null)

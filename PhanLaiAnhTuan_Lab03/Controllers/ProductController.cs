@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Hosting;
+﻿using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PhanLaiAnhTuan_Lab03.Filters;
 using PhanLaiAnhTuan_Lab03.Models;
 using PhanLaiAnhTuan_Lab03.Repositories;
-using System.IO;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
-using PhanLaiAnhTuan_Lab03.Filters;
-
 
 namespace PhanLaiAnhTuan_Lab03.Controllers
 {
@@ -18,19 +16,18 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
     {
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
-        private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly ApplicationDbContext _context;   // khai báo DbContext
-        private readonly IWebHostEnvironment _environment; // khai báo để lưu file ảnh
+        private readonly ApplicationDbContext _context;
+        private readonly Cloudinary _cloudinary;
 
         public ProductController(IProductRepository productRepository,
-                                 ICategoryRepository categoryRepository,
-                                 IWebHostEnvironment webHostEnvironment, ApplicationDbContext context, IWebHostEnvironment environment)
+                                ICategoryRepository categoryRepository,
+                                ApplicationDbContext context,
+                                Cloudinary cloudinary)
         {
             _productRepository = productRepository;
             _categoryRepository = categoryRepository;
-            _webHostEnvironment = webHostEnvironment;
-            _context = context;               // khởi tạo DbContext qua DI
-            _environment = environment;       // khởi tạo IWebHostEnvironment qua DI
+            _context = context;
+            _cloudinary = cloudinary;
         }
 
         [AllowAnonymous]
@@ -38,26 +35,23 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null) return NotFound();
-
-            return View(product); // Tạo view Details.cshtml trong thư mục Views/Product
+            return View(product);
         }
+
         private string RemoveDiacritics(string input)
         {
             if (string.IsNullOrEmpty(input)) return string.Empty;
-
             input = input.Normalize(System.Text.NormalizationForm.FormD);
             var chars = input.Where(c => System.Globalization.CharUnicodeInfo.GetUnicodeCategory(c) != System.Globalization.UnicodeCategory.NonSpacingMark).ToArray();
             return new string(chars).Normalize(System.Text.NormalizationForm.FormC).ToLower();
         }
 
-        // GET: Product
         public async Task<IActionResult> Index(string searchString, string sortOrder)
         {
             var products = await _productRepository.GetAllAsync();
             if (!string.IsNullOrEmpty(searchString))
             {
                 var normalizedSearch = RemoveDiacritics(searchString);
-
                 products = products
                     .Where(p => !string.IsNullOrEmpty(p.Name) && RemoveDiacritics(p.Name).Contains(normalizedSearch))
                     .ToList();
@@ -77,15 +71,13 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View(products);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> Create()
         {
             await LoadCategoriesToViewBag();
             return View();
         }
-
-        [Authorize(Roles = "Admin")]
+        // chỗ này sửa này 
         [HttpPost]
         public async Task<IActionResult> Create(Product product, IFormFile? imageFile)
         {
@@ -97,50 +89,43 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
 
             if (imageFile != null && imageFile.Length > 0)
             {
-                var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
-                if (!Directory.Exists(uploadsFolder))
-                    Directory.CreateDirectory(uploadsFolder);
-
-                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
+                var uploadResult = await UploadImageToCloudinary(imageFile);
+                if (uploadResult != null && uploadResult.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    await imageFile.CopyToAsync(fileStream);
+                    product.ImageUrl = uploadResult.SecureUrl.ToString();
                 }
-
-                product.ImageUrl = uniqueFileName;  // chỉ lưu tên file thôi
+                else
+                {
+                    ModelState.AddModelError("", "Tải ảnh lên Cloudinary thất bại.");
+                    await LoadCategoriesToViewBag();
+                    return View(product);
+                }
             }
 
             await _productRepository.AddAsync(product);
             return RedirectToAction(nameof(Index));
         }
+
+        private async Task<ImageUploadResult> UploadImageToCloudinary(IFormFile imageFile)
+        {
+            var uploadParams = new ImageUploadParams()
+            {
+                File = new FileDescription(imageFile.FileName, imageFile.OpenReadStream()),
+                PublicId = $"{DateTime.Now.Ticks}_{Path.GetFileNameWithoutExtension(imageFile.FileName)}",
+                Overwrite = false
+            };
+
+            return await _cloudinary.UploadAsync(uploadParams);
+        }
+
         private async Task LoadCategoriesToViewBag()
         {
             var categories = await _categoryRepository.GetAllCategoriesAsync();
             ViewBag.Categories = categories;
         }
 
-        private async Task<string> SaveImageAsync(IFormFile imageFile)
-        {
-            var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
-            var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
-
-            if (!Directory.Exists(uploadsFolder))
-                Directory.CreateDirectory(uploadsFolder);
-
-            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-            using (var fileStream = new FileStream(filePath, FileMode.Create))
-            {
-                await imageFile.CopyToAsync(fileStream);
-            }
-
-            return uniqueFileName;
-        }
-
-        [Authorize(Roles = "Admin,Employee")]
         [HttpGet]
+        [Authorize(Roles = "Admin,Employee")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null) return NotFound();
@@ -149,14 +134,12 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             if (product == null) return NotFound();
 
             ViewBag.Categories = await _context.Categories.ToListAsync();
-
             return View(product);
         }
 
-
-        [Authorize(Roles = "Admin,Employee")]
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,Employee")]
         public async Task<IActionResult> Edit(int id, Product product, IFormFile? imageFile)
         {
             if (id != product.Id) return NotFound();
@@ -170,7 +153,6 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             var existingProduct = await _productRepository.GetByIdAsync(id);
             if (existingProduct == null) return NotFound();
 
-            // Cập nhật các trường dữ liệu
             existingProduct.Name = product.Name;
             existingProduct.Price = product.Price;
             existingProduct.Description = product.Description;
@@ -178,58 +160,59 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
 
             if (imageFile != null && imageFile.Length > 0)
             {
-                // Xóa ảnh cũ nếu có
-                if (!string.IsNullOrEmpty(existingProduct.ImageUrl))
+                var uploadResult = await UploadImageToCloudinary(imageFile);
+                if (uploadResult != null && uploadResult.StatusCode == System.Net.HttpStatusCode.OK)
                 {
-                    var oldPath = Path.Combine(_webHostEnvironment.WebRootPath, "images", existingProduct.ImageUrl);
-                    if (System.IO.File.Exists(oldPath))
-                        System.IO.File.Delete(oldPath);
+                    if (!string.IsNullOrEmpty(existingProduct.ImageUrl))
+                    {
+                        var publicId = Path.GetFileNameWithoutExtension(existingProduct.ImageUrl.Split('/').Last());
+                        var deletionParams = new DeletionParams(publicId)
+                        {
+                            ResourceType = ResourceType.Image
+                        };
+                        var deletionResult = await _cloudinary.DestroyAsync(deletionParams); // Sử dụng DestroyAsync
+                        if (deletionResult.Error != null)
+                        {
+                            Console.WriteLine($"Error deleting old image from Cloudinary: {deletionResult.Error.Message}");
+                        }
+                    }
+                    existingProduct.ImageUrl = uploadResult.SecureUrl.ToString();
                 }
-
-                // Lưu ảnh mới
-                var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
-                if (!Directory.Exists(uploadsFolder))
-                    Directory.CreateDirectory(uploadsFolder);
-
-                var uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
-                var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                using (var fileStream = new FileStream(filePath, FileMode.Create))
-                {
-                    await imageFile.CopyToAsync(fileStream);
-                }
-
-                existingProduct.ImageUrl = uniqueFileName;
             }
 
             await _productRepository.UpdateAsync(existingProduct);
-
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null) return NotFound();
-
             return View(product);
         }
 
-        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _productRepository.GetByIdAsync(id);
             if (product == null) return NotFound();
 
-            // Xóa ảnh nếu có
             if (!string.IsNullOrEmpty(product.ImageUrl))
             {
-                var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "images", product.ImageUrl);
-                if (System.IO.File.Exists(imagePath))
-                    System.IO.File.Delete(imagePath);
+                var publicId = Path.GetFileNameWithoutExtension(product.ImageUrl.Split('/').Last());
+                var deletionParams = new DeletionParams(publicId)
+                {
+                    ResourceType = ResourceType.Image
+                };
+                var deletionResult = await _cloudinary.DestroyAsync(deletionParams); // Sử dụng DestroyAsync
+                if (deletionResult.Error != null)
+                {
+                    Console.WriteLine($"Error deleting image from Cloudinary: {deletionResult.Error.Message}");
+                }
             }
 
             await _productRepository.DeleteAsync(id);

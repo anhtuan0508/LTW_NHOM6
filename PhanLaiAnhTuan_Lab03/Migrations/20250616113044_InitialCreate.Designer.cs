@@ -12,8 +12,8 @@ using PhanLaiAnhTuan_Lab03.Models;
 namespace PhanLaiAnhTuan_Lab03.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250611154253_AddOrderAndOrderDetail")]
-    partial class AddOrderAndOrderDetail
+    [Migration("20250616113044_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -187,6 +187,9 @@ namespace PhanLaiAnhTuan_Lab03.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("Is2FAEnabled")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -259,6 +262,10 @@ namespace PhanLaiAnhTuan_Lab03.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Notes")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -266,7 +273,15 @@ namespace PhanLaiAnhTuan_Lab03.Migrations
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ShippingAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -436,7 +451,7 @@ namespace PhanLaiAnhTuan_Lab03.Migrations
                     b.HasOne("PhanLaiAnhTuan_Lab03.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PhanLaiAnhTuan_Lab03.Models.Category", null)

@@ -5,7 +5,7 @@
 namespace PhanLaiAnhTuan_Lab03.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialIdentity : Migration
+    public partial class addUpdateForeignKeyBehavior : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

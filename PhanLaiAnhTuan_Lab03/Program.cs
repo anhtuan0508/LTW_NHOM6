@@ -5,6 +5,7 @@ using PhanLaiAnhTuan_Lab03.Repositories;
 using PhanLaiAnhTuan_Lab03.Data;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using PhanLaiAnhTuan_Lab03.Services;
+using CloudinaryDotNet;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,10 +14,7 @@ builder.Services.AddScoped<IProductRepository, EFProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, EFCategoryRepository>();
 builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
 builder.Services.AddTransient<IEmailSender, EmailSender>();
-builder.Services.AddHttpContextAccessor(); 
-
-
-
+builder.Services.AddHttpContextAccessor();
 
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -40,6 +38,18 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
     options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
     options.SlidingExpiration = true;
+});
+
+// Cloudinary B4 Cấu Hình CLoudiary nha đọc kỹ dòng này 
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
+builder.Services.AddScoped<Cloudinary>(sp =>
+{
+    var config = sp.GetRequiredService<IConfiguration>();
+    var cloudinarySettings = config.GetSection("CloudinarySettings").Get<CloudinarySettings>();
+    return new Cloudinary(new Account(
+        cloudinarySettings.CloudName,
+        cloudinarySettings.ApiKey,
+        cloudinarySettings.ApiSecret));
 });
 
 // Razor + MVC
@@ -80,6 +90,7 @@ else
 app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
+app.MapControllers();
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -110,7 +121,7 @@ async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
 
 async Task SeedAdminUserAsync(UserManager<ApplicationUser> userManager)
 {
-    string adminEmail = "tuanhoanncute@gmail.com";
+    string adminEmail = "tongvutanphat@gmail.com";
     string password = "Admin@123";
 
     var user = await userManager.FindByEmailAsync(adminEmail);
@@ -128,6 +139,5 @@ async Task SeedAdminUserAsync(UserManager<ApplicationUser> userManager)
         {
             await userManager.AddToRoleAsync(newUser, "Admin");
         }
-        // Có thể thêm log nếu result không succeeded
     }
 }

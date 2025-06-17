@@ -51,7 +51,7 @@
         <label class="form-label">Ảnh hiện tại</label><br />
         @if (!string.IsNullOrEmpty(Model.ImageUrl))
         {
-            <img id="previewImage" src="~/images/@Model.ImageUrl" class="img-thumbnail" style="max-height: 200px;" />
+            <img id="previewImage" src="@Model.ImageUrl" class="img-thumbnail" style="max-height: 200px;" onerror="this.src='https://via.placeholder.com/200x150?text=No+Image';" />
         }
         else
         {

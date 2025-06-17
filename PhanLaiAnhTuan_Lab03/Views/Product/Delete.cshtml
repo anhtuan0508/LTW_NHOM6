@@ -13,7 +13,12 @@
 
     @if (!string.IsNullOrEmpty(Model.ImageUrl))
     {
-        <img src="~/images/@Model.ImageUrl" alt="@Model.Name" style="max-height: 150px;" />
+        <img src="@Model.ImageUrl" alt="@Model.Name" style="max-height: 150px;"
+             onerror="this.src='https://via.placeholder.com/150x150?text=No+Image';" />
+    }
+    else
+    {
+        <img src="https://via.placeholder.com/150x150?text=No+Image" alt="@Model.Name" style="max-height: 150px;" />
     }
 
     <dl class="row mt-3">

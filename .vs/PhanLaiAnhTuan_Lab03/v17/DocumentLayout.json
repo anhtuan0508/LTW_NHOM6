@@ -1,18 +1,82 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\",
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\areas\\identity\\pages\\account\\verifyadminotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\areas\\identity\\pages\\account\\verifyadminotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\models\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\models\\cloudinarysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\product\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\product\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\product\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\home\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616112953_addUpdateForeignKeyBehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PhanLaiAnhTuan_Lab03\\Migrations\\20250616112953_addUpdateForeignKeyBehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616112716_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PhanLaiAnhTuan_Lab03\\Migrations\\20250616112716_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\areas\\identity\\pages\\account\\verifyadminotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\areas\\identity\\pages\\account\\verifyadminotp.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\migrations\\20250616113050_addupdateforeignkeybehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\migrations\\20250616113050_addupdateforeignkeybehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\dell\\documents\\ltw_nhom6\\phanlaianhtuan_lab03\\migrations\\20250616113044_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\migrations\\20250616113044_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +86,249 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VerifyAdminOtp.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T14:52:20.287Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAMQBAAAAscACCywowNQBAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T14:32:37.699Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAIwCAAAAAAAAAAAcwKUCAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-12T14:21:25.047Z",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T15:00:26.867Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CloudinarySettings.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Models\\CloudinarySettings.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Models\\CloudinarySettings.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Models\\CloudinarySettings.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Models\\CloudinarySettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T15:06:45.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-16T11:19:50.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Program.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Program.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Program.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAAwCoAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:25:54.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIcCAAAAAAAAAAAmwKUCAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T14:21:25.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvyQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:28:10.883Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-16T12:46:23.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAKEBAAAAAAAAAAAUwL0BAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T15:21:37.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Delete.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Delete.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T17:46:28.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Details.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Details.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Details.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Details.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T15:28:01.397Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Edit.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Edit.cshtml",
+              "ViewState": "AgIAADsAAAAAAAAAAAAQwFcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T15:27:53.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAQwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T15:05:58.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAC4CAAAAAAAAAAAQwEoCAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T14:32:37.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Details.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Details.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Details.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Details.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwB4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-16T16:35:41.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250616112953_addUpdateForeignKeyBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616112953_addUpdateForeignKeyBehavior.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616112953_addUpdateForeignKeyBehavior.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616112953_addUpdateForeignKeyBehavior.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616112953_addUpdateForeignKeyBehavior.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:29:53.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "20250616113050_addUpdateForeignKeyBehavior.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616113050_addUpdateForeignKeyBehavior.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616113050_addUpdateForeignKeyBehavior.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616113050_addUpdateForeignKeyBehavior.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616113050_addUpdateForeignKeyBehavior.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:30:51.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250616113044_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616113044_InitialCreate.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616113044_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616113044_InitialCreate.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616113044_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:30:44.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "20250616112716_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616112716_InitialCreate.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616112716_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Migrations\\20250616112716_InitialCreate.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Migrations\\20250616112716_InitialCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T11:27:16.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VerifyAdminOtp.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\Documents\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\VerifyAdminOtp.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T14:52:20.287Z"
             }
           ]
         }

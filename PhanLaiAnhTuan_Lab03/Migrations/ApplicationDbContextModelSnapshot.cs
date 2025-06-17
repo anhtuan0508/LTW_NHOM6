@@ -448,7 +448,7 @@ namespace PhanLaiAnhTuan_Lab03.Migrations
                     b.HasOne("PhanLaiAnhTuan_Lab03.Models.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.SetNull)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PhanLaiAnhTuan_Lab03.Models.Category", null)
