@@ -1,10 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\khai\\LTW_NHOM6\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Migrations\\20250617151056_AddParentCategoryIdToCategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PhanLaiAnhTuan_Lab03\\Migrations\\20250617151056_AddParentCategoryIdToCategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\areas\\admin\\views\\order\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\shoppingcart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\shoppingcart\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\order\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -65,6 +101,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\areas\\admin\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\areas\\admin\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\shoppingcart\\ordercompleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:1:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\shoppingcart\\ordercompleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:2:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|c:\\users\\user\\source\\repos\\phanlaianhtuan_lab03\\phanlaianhtuan_lab03\\views\\shoppingcart\\ordercompleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:2:0:{7BC13999-E58F-4987-B3E9-9814A0294E8A}|PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj|solutionrelative:phanlaianhtuan_lab03\\views\\shoppingcart\\ordercompleted.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,24 +142,147 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Controllers\\OrderController.cs",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Controllers\\OrderController.cs",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Controllers\\OrderController.cs",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Controllers\\OrderController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:20:10.821Z",
-              "EditorCaption": ""
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "20250617151056_AddParentCategoryIdToCategory.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Migrations\\20250617151056_AddParentCategoryIdToCategory.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Migrations\\20250617151056_AddParentCategoryIdToCategory.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Migrations\\20250617151056_AddParentCategoryIdToCategory.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Migrations\\20250617151056_AddParentCategoryIdToCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T15:10:57.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Views\\Order\\Index.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T14:45:22.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:45:07.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Program.cs",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Program.cs",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Program.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAEwH4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T14:19:54.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAP0CAAAAAAAAAAAAADkCAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T13:27:22.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAFABAAAAAAAAAAAAAFoBAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T13:26:21.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Product\\Create.cshtml",
+              "ViewState": "AgIAAAwAAACA8MjT+8D8vxUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T13:25:03.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "OrderCompleted.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T13:24:54.537Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Checkout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T13:24:51.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T13:24:28.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-17T13:16:52.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "History.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\Order\\History.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\Order\\History.cshtml",
@@ -123,28 +290,23 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\Order\\History.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T10:18:51.928Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "WhenOpened": "2025-06-16T10:18:51.928Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "E:\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
-              "ToolTip": "E:\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
+              "DocumentIndex": 26,
+              "Title": "OrderCompleted.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
+              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
+              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\OrderCompleted.cshtml",
               "ViewState": "AgIAAA4AAAAAAAAAAAAuwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-06-15T15:07:37.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "_ManageNav.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
@@ -152,12 +314,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T10:12:29.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T10:12:29.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Manage.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Manage.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Manage.cshtml",
@@ -165,12 +326,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Manage.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T10:11:57.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T10:11:57.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
@@ -178,12 +338,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T10:06:15.931Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T10:06:15.931Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
@@ -191,12 +350,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T10:06:13.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T10:06:13.287Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "VerifyPasswordOtp.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\VerifyPasswordOtp.cshtml.cs",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\VerifyPasswordOtp.cshtml.cs",
@@ -204,12 +362,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\VerifyPasswordOtp.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:56:06.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:56:06.089Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "VerifyPasswordOtp.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\VerifyPasswordOtp.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\VerifyPasswordOtp.cshtml",
@@ -217,12 +374,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\VerifyPasswordOtp.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T09:55:49.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:55:49.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "ChangePassword.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
@@ -230,12 +386,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:46:12.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:46:12.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "ChangePassword.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
@@ -243,12 +398,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T09:45:49.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T09:45:49.264Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "EmailSettings.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Models\\EmailSettings.cs",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Models\\EmailSettings.cs",
@@ -256,12 +410,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Models\\EmailSettings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T07:26:24.317Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T07:26:24.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "Email.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
@@ -269,12 +422,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAQwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T07:23:37.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T07:23:37.583Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "Email.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
@@ -282,12 +434,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T07:23:03.036Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T07:23:03.036Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
@@ -295,12 +446,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAuwCMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T06:50:56.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T06:50:56.77Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
@@ -308,12 +458,11 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T06:50:29.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-16T06:50:29.352Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "UserManagementController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Controllers\\UserManagementController.cs",
               "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Controllers\\UserManagementController.cs",
@@ -321,73 +470,7 @@
               "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Areas\\Admin\\Controllers\\UserManagementController.cs",
               "ViewState": "AgIAAEAAAAAAAAAAAAAkwLEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T15:15:34.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
-              "ToolTip": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Index.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T10:00:41.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA+wBwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:15:18.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Checkout.cshtml",
-              "DocumentMoniker": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
-              "ToolTip": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Views\\ShoppingCart\\Checkout.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAABYAAAByAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-16T10:00:36.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwEYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-16T09:55:48.486Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\khai\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "PhanLaiAnhTuan_Lab03\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA2wD4AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:15:25.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-15T15:15:34.316Z"
             }
           ]
         }
