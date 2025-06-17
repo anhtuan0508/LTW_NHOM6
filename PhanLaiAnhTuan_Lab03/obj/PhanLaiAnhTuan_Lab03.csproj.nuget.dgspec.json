@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {}
+    "E:\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {
+    "E:\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
+        "projectUniqueName": "E:\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
         "projectName": "PhanLaiAnhTuan_Lab03",
-        "projectPath": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
+        "projectPath": "E:\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\",
+        "outputPath": "E:\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,6 +70,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             }
           },
           "imports": [

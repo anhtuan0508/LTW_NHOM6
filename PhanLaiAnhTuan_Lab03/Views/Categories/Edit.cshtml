@@ -21,12 +21,13 @@
         <label asp-for="ParentCategoryId">Danh mục cha (nếu có)</label>
         <select asp-for="ParentCategoryId" class="form-select">
             <option value="">-- Không có (Danh mục cha) --</option>
-            @foreach (var item in categories.Where(c => c.Id != Model.Id)) // ✅ KHÔNG cho chọn chính nó
+            @foreach (var item in categories)
             {
                 <option value="@item.Id" selected="@(item.Id == Model.ParentCategoryId ? "selected" : null)">
                     @item.Name
                 </option>
             }
+
         </select>
         <span asp-validation-for="ParentCategoryId" class="text-danger"></span>
     </div>

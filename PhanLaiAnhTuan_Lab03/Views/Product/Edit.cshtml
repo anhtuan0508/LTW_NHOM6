@@ -1,14 +1,7 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Product
 
-@* ✅ Thêm dòng để có thể dùng class Category *@
-@using PhanLaiAnhTuan_Lab03.Models
-
 @{
     ViewData["Title"] = "Chỉnh sửa thú cưng";
-
-    // ✅ THÊM: Ép kiểu ViewBag sang danh sách rõ ràng
-    var parentCategories = ViewBag.ParentCategories as List<Category>;
-    var allCategories = ViewBag.AllCategories as List<Category>;
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -43,23 +36,9 @@
 
     <div class="mb-3">
         <label asp-for="CategoryId" class="form-label">Loài</label>
-
-        @* ✅ ĐÃ SỬA: Hiển thị danh mục cha/con với <optgroup> và chọn sẵn giá trị hiện tại *@
-        <select asp-for="CategoryId" class="form-select">
+        <select asp-for="CategoryId" class="form-select" asp-items="@(new SelectList(ViewBag.Categories, "Id", "Name"))">
             <option value="">-- Chọn loài --</option>
-            @foreach (var parent in parentCategories)
-            {
-                <optgroup label="@parent.Name">
-                    @foreach (var child in allCategories.Where(c => c.ParentCategoryId == parent.Id))
-                    {
-                        <option value="@child.Id" selected="@(child.Id == Model.CategoryId ? "selected" : null)">
-                            @child.Name
-                        </option>
-                    }
-                </optgroup>
-            }
         </select>
-
         <span asp-validation-for="CategoryId" class="text-danger"></span>
     </div>
 
@@ -93,7 +72,6 @@
 
 @section Scripts {
     <script>
-        // ✅ Giữ nguyên phần xem trước ảnh khi chọn ảnh mới
         document.getElementById("imageInput").addEventListener("change", function (event) {
             const file = event.target.files[0];
             if (file) {
