@@ -1,0 +1,22 @@
+﻿@model PhanLaiAnhTuan_Lab03.Models.Category
+@{
+    ViewData["Title"] = "Danh sách danh mục con";
+}
+
+<h2>Danh mục con của @Model.Name</h2>
+
+@if (Model.SubCategories != null && Model.SubCategories.Any())
+{
+    <ul>
+        @foreach (var subCategory in Model.SubCategories)
+        {
+            <li>@subCategory.Name</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Không có danh mục con.</p>
+}
+
+<a asp-action="Index" class="btn btn-secondary">Quay lại</a>

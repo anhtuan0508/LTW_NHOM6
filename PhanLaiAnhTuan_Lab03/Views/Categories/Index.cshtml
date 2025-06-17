@@ -1,33 +1,58 @@
 ﻿@model IEnumerable<PhanLaiAnhTuan_Lab03.Models.Category>
-
 @{
     ViewData["Title"] = "Danh sách loài";
 }
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<h2 class="mt-4">Danh sách loài</h2>
-
-
+<h2>@ViewData["Title"]</h2>
 <a asp-controller="Product" asp-action="Index" class="btn btn-secondary mb-3">Quay lại danh sách loài</a>
 
-<a asp-action="Create" class="btn btn-primary mb-3">Thêm loài</a>
+<p>
+    <a class="btn btn-primary" asp-action="Create">Thêm loài</a>
+</p>
 
-<table class="table table-bordered table-striped">
-    <thead class="thead-dark">
+<table class="table table-bordered">
+    <thead class="table-light">
         <tr>
-            <th>Tên loài</th>
+            <th>Loài</th>
+            <th>Thuộc tính / Màu sắc</th> <!-- ✅ Thêm  -->
             <th>Hành động</th>
         </tr>
     </thead>
+    <!-- để trống thay vì 'Nhấn để xem',cập nhật lại index -->
     <tbody>
-        @foreach (var item in Model)
+        @foreach (var parent in Model.Where(c => c.ParentCategoryId == null))
         {
-            <tr>
-                <td>@item.Name</td>
+            <tr class="parent-row" data-id="@parent.Id" style="cursor:pointer;">
+                <td>@parent.Name</td>
+                <td><span class="text-muted">Nhấn để xem</span></td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Sửa</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Xóa</a>
+                    <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@parent.Id">Sửa</a>
+                    <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@parent.Id">Xoá</a>
                 </td>
             </tr>
+
+            @foreach (var sub in Model.Where(c => c.ParentCategoryId == parent.Id))
+            {
+                <tr class="sub-row d-none" data-parent-id="@parent.Id">
+                    <td class="ps-4">↳ @sub.Name</td>
+                    <td></td>  <!-- để trống thay vì 'Nhấn để xem' -->
+                    <td>
+                        <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@sub.Id">Sửa</a>
+                        <a class="btn btn-danger btn-sm" asp-action="Delete" asp-route-id="@sub.Id">Xoá</a>
+                    </td>
+                </tr>
+            }
         }
     </tbody>
+
 </table>
+
+<script>
+    $(document).ready(function () {
+        $('.parent-row').click(function () {
+            const id = $(this).data('id');
+            $(`.sub-row[data-parent-id='${id}']`).toggleClass('d-none');
+        });
+    });
+</script>

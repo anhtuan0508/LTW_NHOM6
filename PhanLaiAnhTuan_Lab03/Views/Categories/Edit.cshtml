@@ -2,17 +2,37 @@
 
 @{
     ViewData["Title"] = "Chỉnh sửa loài";
+    var categories = ViewBag.AllCategories as List<PhanLaiAnhTuan_Lab03.Models.Category>; // ✅ THÊM
 }
 
 <h2 class="mt-4">Chỉnh sửa loài</h2>
 
 <form asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
-    <div class="form-group">
+
+    <div class="form-group mb-3">
         <label asp-for="Name">Tên loài</label>
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
+
+
+    <div class="form-group mb-3">
+        <label asp-for="ParentCategoryId">Danh mục cha (nếu có)</label>
+        <select asp-for="ParentCategoryId" class="form-select">
+            <option value="">-- Không có (Danh mục cha) --</option>
+            @foreach (var item in categories)
+            {
+                <option value="@item.Id" selected="@(item.Id == Model.ParentCategoryId ? "selected" : null)">
+                    @item.Name
+                </option>
+            }
+
+        </select>
+        <span asp-validation-for="ParentCategoryId" class="text-danger"></span>
+    </div>
+
+
     <button type="submit" class="btn btn-primary">Lưu thay đổi</button>
     <a asp-action="Index" class="btn btn-secondary">Hủy</a>
 </form>

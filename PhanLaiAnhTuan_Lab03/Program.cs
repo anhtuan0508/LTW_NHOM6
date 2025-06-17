@@ -133,7 +133,7 @@ async Task SeedRolesAsync(RoleManager<IdentityRole> roleManager)
 
 async Task SeedAdminUserAsync(UserManager<ApplicationUser> userManager)
 {
-    string adminEmail = "tuanhoanncute@gmail.com";
+    string adminEmail = "thanhcuc444@gmail.com";
     string password = "Admin@123";
 
     var user = await userManager.FindByEmailAsync(adminEmail);

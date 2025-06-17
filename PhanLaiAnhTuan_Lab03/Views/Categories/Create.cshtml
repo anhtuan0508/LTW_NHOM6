@@ -1,16 +1,25 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Category
 
 @{
-    ViewData["Title"] = "Thêm loài thú cưng";
+    ViewData["Title"] = "Thêm loài hoặc thuộc tính thú cưng";
 }
 
 <h2>@ViewData["Title"]</h2>
 
 <form asp-action="Create" method="post" class="mt-3">
+    <!-- Tên danh mục -->
     <div class="mb-3">
-        <label asp-for="Name" class="form-label">Tên loài</label>
-        <input asp-for="Name" class="form-control" />
+        <label asp-for="Name" class="form-label">Tên loài hoặc thuộc tính</label>
+        <input asp-for="Name" class="form-control" placeholder="VD: Mèo, Mèo trắng, Mèo vằn..." />
         <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <!-- Chọn loài cha (nếu đây là thuộc tính) -->
+    <div class="mb-3">
+        <label asp-for="ParentCategoryId" class="form-label">Thuộc loài</label>
+        <select asp-for="ParentCategoryId" asp-items="ViewBag.CategoryList" class="form-select">
+            <option value="">-- Đây là loài chính (không thuộc loài nào) --</option>
+        </select>
     </div>
 
     <button type="submit" class="btn btn-primary">Lưu</button>
