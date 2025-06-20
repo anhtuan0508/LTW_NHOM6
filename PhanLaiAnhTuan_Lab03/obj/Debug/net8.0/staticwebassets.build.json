@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "unN9RUVmr0pkYBhG4R+mf0iPI4oWjpXSn0YOMNGdwgY=",
+  "Hash": "nnRyL6P/pF24Y4iAwIwZuX/d1z3/Vlda1L2O6Aka7pM=",
   "Source": "PhanLaiAnhTuan_Lab03",
   "BasePath": "_content/PhanLaiAnhTuan_Lab03",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "PhanLaiAnhTuan_Lab03\\wwwroot",
       "Source": "PhanLaiAnhTuan_Lab03",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "Pattern": "**"
     }
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "C:\\Users\\Admin\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\8.0.3\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PhanLaiAnhTuan_Lab03.styles.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PhanLaiAnhTuan_Lab03.styles.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "PhanLaiAnhTuan_Lab03.styles.css",
       "AssetKind": "All",
@@ -1173,13 +1173,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PhanLaiAnhTuan_Lab03.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PhanLaiAnhTuan_Lab03.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PhanLaiAnhTuan_Lab03.bundle.scp.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PhanLaiAnhTuan_Lab03.bundle.scp.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "PhanLaiAnhTuan_Lab03.bundle.scp.css",
       "AssetKind": "All",
@@ -1192,13 +1192,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PhanLaiAnhTuan_Lab03.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PhanLaiAnhTuan_Lab03.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\custom.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\custom.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/custom.css",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\css\\custom.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/fontawesome.css",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\css\\fontawesome.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/fontawesome.min.css",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\css\\fontawesome.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/slick.min.css",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\css\\slick.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/slick-theme.css",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\css\\slick-theme.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/slick-theme.min.css",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\css\\slick-theme.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/templatemo.css",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\css\\templatemo.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "css/templatemo.min.css",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\css\\templatemo.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\favicon.ico",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -1404,10 +1404,67 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\4cc57380-8b6c-48dc-b454-cb21d224eaae.png",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "BasePath": "_content/PhanLaiAnhTuan_Lab03",
+      "RelativePath": "images/4cc57380-8b6c-48dc-b454-cb21d224eaae.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\4cc57380-8b6c-48dc-b454-cb21d224eaae.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\54be8b89-785d-487c-b9ea-99d88290050c.png",
+      "SourceId": "PhanLaiAnhTuan_Lab03",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "BasePath": "_content/PhanLaiAnhTuan_Lab03",
+      "RelativePath": "images/54be8b89-785d-487c-b9ea-99d88290050c.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\54be8b89-785d-487c-b9ea-99d88290050c.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\660e4b06-818e-483c-bcc5-a75bfb957577.png",
+      "SourceId": "PhanLaiAnhTuan_Lab03",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "BasePath": "_content/PhanLaiAnhTuan_Lab03",
+      "RelativePath": "images/660e4b06-818e-483c-bcc5-a75bfb957577.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\660e4b06-818e-483c-bcc5-a75bfb957577.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg",
+      "SourceId": "PhanLaiAnhTuan_Lab03",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg",
       "AssetKind": "All",
@@ -1423,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/adc6aa44-891a-4070-9886-e0d16b922097.jpg",
       "AssetKind": "All",
@@ -1442,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\book8.jpg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\book8.jpg",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/book8.jpg",
       "AssetKind": "All",
@@ -1461,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\images\\book8.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg",
       "AssetKind": "All",
@@ -1480,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/e6844224-b100-451a-9783-5d9121f313c5.jpg",
       "AssetKind": "All",
@@ -1499,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg",
       "AssetKind": "All",
@@ -1518,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\f84c9ba5-a4c2-4d87-8bfc-9c9e6c53a5d0.jpg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\f84c9ba5-a4c2-4d87-8bfc-9c9e6c53a5d0.jpg",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/f84c9ba5-a4c2-4d87-8bfc-9c9e6c53a5d0.jpg",
       "AssetKind": "All",
@@ -1537,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\images\\f84c9ba5-a4c2-4d87-8bfc-9c9e6c53a5d0.jpg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh1.png",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh1.png",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/hinh1.png",
       "AssetKind": "All",
@@ -1556,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hinh1.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh3.jpeg",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh3.jpeg",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "images/hinh3.jpeg",
       "AssetKind": "All",
@@ -1575,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hinh3.jpeg"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\bootstrap.bundle.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -1594,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\custom.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\custom.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/custom.js",
       "AssetKind": "All",
@@ -1613,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\js\\custom.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-1.11.0.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-1.11.0.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/jquery-1.11.0.min.js",
       "AssetKind": "All",
@@ -1632,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-1.11.0.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/jquery-migrate-1.2.1.min.js",
       "AssetKind": "All",
@@ -1651,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-migrate-1.2.1.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\site.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1670,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\slick.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\slick.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/slick.min.js",
       "AssetKind": "All",
@@ -1689,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\js\\slick.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/templatemo.js",
       "AssetKind": "All",
@@ -1708,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\js\\templatemo.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "js/templatemo.min.js",
       "AssetKind": "All",
@@ -1727,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\js\\templatemo.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1746,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1765,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1784,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1803,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1822,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -1841,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -1860,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -1879,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1898,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1917,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1936,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1955,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1974,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1993,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2012,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2031,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2050,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2069,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2088,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2107,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2126,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2145,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2164,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2183,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2202,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2221,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2240,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2259,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2278,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2297,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2316,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2335,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2354,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2373,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2392,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2411,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2430,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2449,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2468,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2487,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2506,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2525,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2544,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2563,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2582,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2601,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2620,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2639,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2658,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2677,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2696,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2715,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2734,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2753,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2772,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2791,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "PhanLaiAnhTuan_Lab03",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\",
       "BasePath": "_content/PhanLaiAnhTuan_Lab03",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

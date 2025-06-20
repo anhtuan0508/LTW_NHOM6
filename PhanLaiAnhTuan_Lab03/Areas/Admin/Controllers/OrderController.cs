@@ -23,6 +23,7 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
                 .Include(o => o.ApplicationUser)
                 .Include(o => o.OrderDetails)
                 .ThenInclude(d => d.Product)
+                .AsNoTracking() // ❗ rất quan trọng để lấy dữ liệu mới nhất
                 .OrderByDescending(o => o.OrderDate)
                 .ToListAsync();
 
@@ -46,11 +47,45 @@ namespace PhanLaiAnhTuan_Lab03.Areas.Admin.Controllers
         // Xác nhận đơn
         public async Task<IActionResult> Confirm(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
+            var order = await _context.Orders
+                .Include(o => o.OrderDetails)
+                .ThenInclude(od => od.Product)
+                .FirstOrDefaultAsync(o => o.Id == id);
+
             if (order == null) return NotFound();
 
+            if (order.Status == "Đã xác nhận")
+            {
+                TempData["Warning"] = "❗ Đơn hàng đã được xác nhận trước đó.";
+                return RedirectToAction(nameof(Index));
+            }
+
+            // Kiểm tra tồn kho
+            foreach (var detail in order.OrderDetails)
+            {
+                if (detail.Product != null && detail.Product.Quantity < detail.Quantity)
+                {
+                    TempData["Error"] = $"❌ Không đủ hàng cho: {detail.Product.Name}. Có {detail.Product.Quantity}, cần {detail.Quantity}.";
+                    return RedirectToAction(nameof(Details), new { id = order.Id });
+                }
+            }
+
+            // Trừ kho
+            foreach (var detail in order.OrderDetails)
+            {
+                if (detail.Product != null)
+                {
+                    detail.Product.Quantity -= detail.Quantity;
+                    _context.Products.Update(detail.Product); // đảm bảo EF theo dõi thay đổi
+                }
+            }
+
             order.Status = "Đã xác nhận";
-            await _context.SaveChangesAsync();
+            _context.Orders.Update(order); // đảm bảo EF theo dõi thay đổi
+
+            await _context.SaveChangesAsync(); // lưu trừ kho + trạng thái
+
+            TempData["Success"] = "✅ Đã xác nhận đơn hàng.";
             return RedirectToAction(nameof(Index));
         }
 

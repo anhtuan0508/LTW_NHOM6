@@ -10,6 +10,8 @@ namespace PhanLaiAnhTuan_Lab03.Models
         public string? Description { get; set; }
         public string? ImageUrl { get; set; }
 
+        public int Quantity { get; set; } // ➕ số lượng tồn kho
+
         public int CategoryId { get; set; }
         public Category? Category { get; set; }
     }

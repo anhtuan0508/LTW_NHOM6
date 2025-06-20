@@ -21,6 +21,7 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             _context = context;
             _userManager = userManager;
         }
+
         public IActionResult UpdateQuantity(int productId, int quantity)
         {
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart") ?? new ShoppingCart();
@@ -34,7 +35,6 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             HttpContext.Session.SetObjectAsJson("Cart", cart);
             return RedirectToAction("Index");
         }
-
 
         public async Task<IActionResult> AddToCart(int productId, int quantity = 1)
         {
@@ -58,8 +58,24 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         public IActionResult Index()
         {
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart") ?? new ShoppingCart();
+
+            // Tạo danh sách các sản phẩm hết hàng
+            var outOfStockItems = new List<string>();
+
+            foreach (var item in cart.Items)
+            {
+                var product = _context.Products.Find(item.ProductId);
+                if (product != null && product.Quantity <= 0)
+                {
+                    outOfStockItems.Add(product.Name);
+                }
+            }
+
+            // Truyền thông báo ra View qua ViewBag
+            ViewBag.OutOfStockItems = outOfStockItems;
             return View(cart);
         }
+
 
         public IActionResult RemoveFromCart(int productId)
         {
@@ -75,16 +91,30 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
         public async Task<IActionResult> Checkout(Order order)
         {
             var cart = HttpContext.Session.GetObjectFromJson<ShoppingCart>("Cart");
-            if (cart == null || !cart.Items.Any()) return RedirectToAction("Index");
+            if (cart == null || !cart.Items.Any())
+                return RedirectToAction("Index");
+
+            // KIỂM TRA SỐ LƯỢNG TỒN KHO (chỉ kiểm tra, không trừ)
+            foreach (var item in cart.Items)
+            {
+                var product = await _context.Products.FindAsync(item.ProductId);
+                if (product == null || product.Quantity < item.Quantity)
+                {
+                    TempData["Error"] = $"❌ Sản phẩm '{product?.Name}' không đủ hàng (còn {product?.Quantity ?? 0} con).";
+                    return RedirectToAction("Index");
+                }
+            }
 
             var user = await _userManager.GetUserAsync(User);
 
             order.UserId = user.Id;
             order.FullName = Request.Form["FullName"];
             order.PhoneNumber = Request.Form["PhoneNumber"];
-
             order.OrderDate = DateTime.UtcNow;
             order.TotalPrice = cart.Total;
+            order.Status = "Chờ Xác nhận";
+
+            // KHÔNG trừ kho tại đây
             order.OrderDetails = cart.Items.Select(i => new OrderDetail
             {
                 ProductId = i.ProductId,
@@ -99,5 +129,4 @@ namespace PhanLaiAnhTuan_Lab03.Controllers
             return View("OrderCompleted", order.Id);
         }
     }
-
 }

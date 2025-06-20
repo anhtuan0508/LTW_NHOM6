@@ -1,0 +1,24 @@
+﻿@model PhanLaiAnhTuan_Lab03.Models.Product
+
+@{
+    ViewData["Title"] = "Cập nhật số lượng";
+}
+
+<h2>Cập nhật số lượng tồn kho</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+
+    <div class="mb-3">
+        <label class="form-label">Tên thú cưng</label>
+        <input class="form-control" value="@Model.Name" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Số lượng tồn kho</label>
+        <input type="number" name="quantity" class="form-control" value="@Model.Quantity" min="0" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

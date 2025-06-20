@@ -1,0 +1,42 @@
+﻿@model List<PhanLaiAnhTuan_Lab03.Models.Product>
+
+@{
+    ViewData["Title"] = "Quản lý kho";
+}
+
+<h2>Quản lý kho</h2>
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Hình</th>
+            <th>Tên thú cưng</th>
+            <th>Danh mục</th>
+            <th>Giá</th>
+            <th>Tồn kho</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/@item.ImageUrl" width="80" />
+                </td>
+                <td>@item.Name</td>
+                <td>@item.Category?.Name</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary">Chỉnh sửa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

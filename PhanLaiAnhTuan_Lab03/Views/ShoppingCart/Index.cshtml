@@ -1,7 +1,21 @@
 ﻿@model ShoppingCart
-
 @{
     ViewData["Title"] = "Giỏ hàng";
+}
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["Error"]
+    </div>
+}
+
+@if (ViewBag.OutOfStockItems != null && ViewBag.OutOfStockItems.Count > 0)
+{
+    <div class="alert alert-warning">
+        ❌ Các sản phẩm sau đã hết hàng: <strong>@string.Join(", ", ViewBag.OutOfStockItems)</strong>.<br />
+        Vui lòng xóa hoặc chờ cập nhật lại kho hàng!
+    </div>
 }
 
 <h2 class="mb-4">🛒 Giỏ hàng của bạn</h2>
@@ -58,7 +72,8 @@ else
 
         <h5 class="text-end">Tổng: <strong>@Model.Total.ToString("C")</strong></h5>
 
-        <a asp-action="Checkout" class="btn btn-success">
+        <a asp-action="Checkout"
+           class="btn btn-success @(ViewBag.OutOfStockItems != null && ViewBag.OutOfStockItems.Count > 0 ? "disabled" : "")">
             <i class="bi bi-bag-check"></i> Đặt hàng
         </a>
     </div>

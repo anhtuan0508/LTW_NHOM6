@@ -314,9 +314,11 @@
                             <th><i class="fas fa-tag"></i> Tên thú cưng</th>
                             <th><i class="fas fa-dollar-sign"></i> Giá bán</th>
                             <th><i class="fas fa-layer-group"></i> Danh mục</th>
+                            <th><i class="fas fa-boxes"></i> Kho</th> <!-- thêm dòng này -->
                             <th><i class="fas fa-cogs"></i> Thao tác</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         @foreach (var item in Model)
                         {
@@ -344,11 +346,18 @@
                                     <div class="pet-name">@item.Name</div>
                                 </td>
                                 <td>
-                                    <div class="pet-price">@item.Price.ToString("C")</div>
+                                    <div class="pet-price">@item.Price.ToString("C", System.Globalization.CultureInfo.GetCultureInfo("vi-VN"))</div>
                                 </td>
                                 <td>
                                     <span class="pet-category">@(item.Category?.Name ?? "Chưa phân loại")</span>
                                 </td>
+
+                                <!-- ✅ Cột Kho được thêm vào đúng vị trí -->
+                                <td>
+                                    <span class="badge bg-info text-dark">@item.Quantity</span>
+                                </td>
+
+                                <!-- ✅ Cột Thao tác -->
                                 <td class="action-buttons-cell">
                                     <div class="d-flex flex-wrap justify-content-center gap-1">
                                         @if (User.Identity.IsAuthenticated)
@@ -378,6 +387,7 @@
                             </tr>
                         }
                     </tbody>
+
                 </table>
             </div>
         }

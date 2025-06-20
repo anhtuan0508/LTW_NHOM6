@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {}
+    "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {
+    "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
         "projectName": "PhanLaiAnhTuan_Lab03",
-        "projectPath": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
+        "projectPath": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\PhanLaiAnhTuan_Lab03.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,6 +70,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             }
           },
           "imports": [

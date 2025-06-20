@@ -1,0 +1,92 @@
+﻿@model List<PhanLaiAnhTuan_Lab03.Models.ViewModels.ProductSalesViewModel>
+
+@{
+    ViewData["Title"] = "Thống kê sản phẩm đã bán";
+    var chartData = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Select(p => new
+    {
+        name = p.ProductName,
+        quantity = p.QuantitySold
+    }));
+}
+
+<h2 class="mb-4">📈 Thống kê sản phẩm đã bán</h2>
+
+<div style="overflow-x: auto;">
+    <canvas id="productChart" style="max-height: 400px; min-width: 600px;"></canvas>
+</div>
+
+<table class="table table-bordered mt-4">
+    <thead class="table-light">
+        <tr>
+            <th>Sản phẩm</th>
+            <th>Số lượng đã bán</th>
+            <th>Ngày bán gần nhất</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.QuantitySold</td>
+                <td>@item.OrderDate.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const data = @Html.Raw(chartData);
+        const ctx = document.getElementById('productChart').getContext('2d');
+
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: data.map(d => d.name),
+                datasets: [{
+                    label: 'Số lượng đã bán',
+                    data: data.map(d => d.quantity),
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1,
+                    barThickness: 30 // ✅ Giảm độ rộng cột
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Biểu đồ cột số lượng sản phẩm đã bán'
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            font: {
+                                size: 10 // ✅ Giảm cỡ chữ tên sản phẩm
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Sản phẩm'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Số lượng'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}

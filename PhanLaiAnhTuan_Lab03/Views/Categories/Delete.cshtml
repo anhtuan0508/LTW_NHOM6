@@ -1,7 +1,7 @@
 ﻿@model PhanLaiAnhTuan_Lab03.Models.Category
-
 @{
-    ViewData["Title"] = "Xóa loài";
+    ViewData["Title"] = "Xóa danh mục";
+    bool hasSubCategories = ViewBag.HasSubCategories != null && (bool)ViewBag.HasSubCategories;
 }
 
 <h2>@ViewData["Title"]</h2>
@@ -16,7 +16,16 @@
     </div>
 }
 
-<h3>Bạn có chắc muốn xóa loài này?</h3>
+@if (hasSubCategories)
+{
+    <div class="alert alert-warning">
+        Danh mục này hiện đang chứa các danh mục con. Bạn có chắc chắn muốn xóa không?
+    </div>
+}
+else
+{
+    <h4>Bạn có chắc muốn xóa danh mục này?</h4>
+}
 
 <div>
     <h4>@Model.Name</h4>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Product>
+
+<h2>Quản lý kho</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>Giá</th>
+            <th>Tồn kho</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price.ToString("C")</td>
+                <td>@p.Quantity</td>
+                <td>
+                    <a asp-action="UpdateStock" asp-route-id="@p.Id" class="btn btn-primary btn-sm">Nhập thêm</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

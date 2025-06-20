@@ -1,0 +1,13 @@
+﻿@model Product
+
+<h2>Nhập hàng cho: @Model.Name</h2>
+
+<form asp-action="UpdateStock" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <div class="form-group">
+        <label for="quantityToAdd">Số lượng nhập thêm:</label>
+        <input type="number" name="quantityToAdd" class="form-control" min="1" required />
+    </div>
+    <button type="submit" class="btn btn-success">Cập nhật</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>

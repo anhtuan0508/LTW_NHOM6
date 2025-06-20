@@ -1,347 +1,359 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PhanLaiAnhTuan_Lab03.bundle.scp.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PhanLaiAnhTuan_Lab03.bundle.scp.css",
       "PackagePath": "staticwebassets\\PhanLaiAnhTuan_Lab03.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\custom.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\custom.css",
       "PackagePath": "staticwebassets\\css\\custom.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.css",
       "PackagePath": "staticwebassets\\css\\fontawesome.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\fontawesome.min.css",
       "PackagePath": "staticwebassets\\css\\fontawesome.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.css",
       "PackagePath": "staticwebassets\\css\\slick-theme.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick-theme.min.css",
       "PackagePath": "staticwebassets\\css\\slick-theme.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\slick.min.css",
       "PackagePath": "staticwebassets\\css\\slick.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.css",
       "PackagePath": "staticwebassets\\css\\templatemo.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\css\\templatemo.min.css",
       "PackagePath": "staticwebassets\\css\\templatemo.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\4cc57380-8b6c-48dc-b454-cb21d224eaae.png",
+      "PackagePath": "staticwebassets\\images\\4cc57380-8b6c-48dc-b454-cb21d224eaae.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\54be8b89-785d-487c-b9ea-99d88290050c.png",
+      "PackagePath": "staticwebassets\\images\\54be8b89-785d-487c-b9ea-99d88290050c.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\660e4b06-818e-483c-bcc5-a75bfb957577.png",
+      "PackagePath": "staticwebassets\\images\\660e4b06-818e-483c-bcc5-a75bfb957577.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg",
       "PackagePath": "staticwebassets\\images\\69ebcbef-6224-4598-83f9-02f6c35f5e6a.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg",
       "PackagePath": "staticwebassets\\images\\adc6aa44-891a-4070-9886-e0d16b922097.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\book8.jpg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\book8.jpg",
       "PackagePath": "staticwebassets\\images\\book8.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg",
       "PackagePath": "staticwebassets\\images\\e67c69fa-c5dd-4f1d-b543-bab1d91d4f2f.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg",
       "PackagePath": "staticwebassets\\images\\e6844224-b100-451a-9783-5d9121f313c5.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg",
       "PackagePath": "staticwebassets\\images\\eafaa5c1-6dae-4f2f-8f16-1a286175c42b.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\f84c9ba5-a4c2-4d87-8bfc-9c9e6c53a5d0.jpg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\f84c9ba5-a4c2-4d87-8bfc-9c9e6c53a5d0.jpg",
       "PackagePath": "staticwebassets\\images\\f84c9ba5-a4c2-4d87-8bfc-9c9e6c53a5d0.jpg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh1.png",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh1.png",
       "PackagePath": "staticwebassets\\images\\hinh1.png"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh3.jpeg",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\images\\hinh3.jpeg",
       "PackagePath": "staticwebassets\\images\\hinh3.jpeg"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\custom.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\custom.js",
       "PackagePath": "staticwebassets\\js\\custom.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-1.11.0.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-1.11.0.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-1.11.0.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\jquery-migrate-1.2.1.min.js",
       "PackagePath": "staticwebassets\\js\\jquery-migrate-1.2.1.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\slick.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\slick.min.js",
       "PackagePath": "staticwebassets\\js\\slick.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.js",
       "PackagePath": "staticwebassets\\js\\templatemo.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\js\\templatemo.min.js",
       "PackagePath": "staticwebassets\\js\\templatemo.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\Admin\\LTW_NHOM6\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\Admin\\Downloads\\LTW_NHOM6(quảnli thống kê)\\PhanLaiAnhTuan_Lab03\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
